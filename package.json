@@ -1,0 +1,48 @@
+{
+  "name": "hr-2019",
+  "version": "1.0.0",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:ctsin/HR-2019.git"
+  },
+  "scripts": {
+    "dev": "fis3 server restart && fis3 release -wL",
+    "build": "rimraf ./docs && fis3 release -d ./docs",
+    "sync": "git pull && git push",
+    "stop": "fis3 server stop"
+  },
+  "eslintConfig": {
+    "root": true,
+    "extends": [
+      "eslint:recommended",
+      "plugin:prettier/recommended"
+    ],
+    "env": {
+      "browser": true,
+      "node": true,
+      "es6": true,
+      "jquery": true
+    },
+    "globals": {
+      "fis": true
+    }
+  },
+  "author": "ZAC FRONTEND TEAM",
+  "devDependencies": {
+    "babel-preset-env": "^1.7.0",
+    "eslint": "^5.5.0",
+    "eslint-config-prettier": "^3.0.1",
+    "eslint-config-recommended": "^3.0.0",
+    "eslint-plugin-prettier": "^2.6.2",
+    "fis-parser-babel-6.x": "^6.24.1",
+    "fis-parser-node-sass": "^1.0.3",
+    "fis3": "^3.4.39",
+    "fis3-hook-relative": "^2.0.3",
+    "fis3-parser-pug": "^1.1.1",
+    "fis3-preprocessor-autoprefixer": "^0.1.1",
+    "prettier": "^1.14.2",
+    "rimraf": "^2.6.2"
+  },
+  "dependencies": {}
+}
