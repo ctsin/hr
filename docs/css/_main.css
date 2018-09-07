@@ -36,9 +36,6 @@ a {
   text-decoration: none;
   outline: 0;
 }
-@media screen and (orientation: landscape) {
-  /*   css[横向定义样式]  */
-}
 /***********************动画定义*************************/
 .a-show0 {
   -webkit-animation: show 100ms linear 0.5s forwards;
@@ -568,7 +565,6 @@ body {
   /*行业地位*/
   /*薪酬福利*/
   /*招聘职位*/
-  /*招聘路线日程*/
   /*联系我们*/
   /*向下翻页主按钮*/
 }
@@ -1176,10 +1172,7 @@ body {
   background-size: 69px 48px;
   background-position: -17px 0;
 }
-#SchoolRecruit .recruit-job .sell-er,
-#SchoolRecruit .recruit-job .guanxi-er,
-#SchoolRecruit .recruit-job .dev-er,
-#SchoolRecruit .recruit-job .hr-er {
+#SchoolRecruit .recruit-job .sell-er {
   width: 49%;
   float: left;
   text-align: center;
@@ -1207,15 +1200,6 @@ body {
 #SchoolRecruit .recruit-job .avatar-seller {
   background-position: 0 0;
 }
-#SchoolRecruit .recruit-job .avatar-guanxier {
-  background-position: -90px 0;
-}
-#SchoolRecruit .recruit-job .avatar-dever {
-  background-position: -270px 0;
-}
-#SchoolRecruit .recruit-job .avatar-hr {
-  background-position: -180px 0;
-}
 #SchoolRecruit .recruit-job .job-name {
   margin-bottom: 20px;
   font-size: 13px;
@@ -1231,21 +1215,8 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
-#SchoolRecruit .recruit-job .back-jobs {
-  top: 25px;
-  left: 25px;
-}
 #SchoolRecruit .recruit-job .sell-er-bg {
   background-image: url("../img/sell-bg.jpg");
-}
-#SchoolRecruit .recruit-job .guanxi-er-bg {
-  background-image: url("../img/guanxi-bg.jpg");
-}
-#SchoolRecruit .recruit-job .dev-er-bg {
-  background-image: url("../img/dev-bg.jpg");
-}
-#SchoolRecruit .recruit-job .hr-er-bg {
-  background-image: url("../img/hr-bg.jpg");
 }
 #SchoolRecruit .recruit-job .summary {
   margin-top: 30px;
@@ -1335,74 +1306,6 @@ body {
 }
 #SchoolRecruit .recruit-job .row-txt {
   width: 96%;
-}
-#SchoolRecruit .recruit-stroke .stroke-wrap {
-  position: relative;
-  margin: 15% auto 0 auto;
-  width: 375px;
-  height: 667px;
-  background-image: url("../img/schedule-bg.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-#SchoolRecruit .recruit-stroke .schedule-box {
-  position: absolute;
-  opacity: 0;
-  width: 90px;
-  height: 58px;
-  padding: 6px 5px 0;
-  text-align: center;
-  border: 1px solid #fc9f31;
-  -webkit-border-radius: 5px;
-          border-radius: 5px;
-  color: #323232;
-  background-color: #fffefb;
-}
-#SchoolRecruit .recruit-stroke .schedule-box:after {
-  content: "";
-  position: absolute;
-  left: 0;
-  bottom: -15px;
-  width: 100px;
-  height: 15px;
-  background-image: url("../img/box-foot.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
-}
-#SchoolRecruit .recruit-stroke .schedule-one {
-  top: -26px;
-  left: 70px;
-}
-#SchoolRecruit .recruit-stroke .schedule-two {
-  top: 0px;
-  left: 244px;
-}
-#SchoolRecruit .recruit-stroke .schedule-three {
-  top: 100px;
-  left: 134px;
-}
-#SchoolRecruit .recruit-stroke .schedule-four {
-  top: 206px;
-  left: 34px;
-}
-#SchoolRecruit .recruit-stroke .schedule-five {
-  top: 215px;
-  left: 236px;
-}
-#SchoolRecruit .recruit-stroke .schedule-six {
-  top: 310px;
-  left: 170px;
-}
-#SchoolRecruit .recruit-stroke .schedule-seven {
-  top: 380px;
-  left: 70px;
-}
-#SchoolRecruit .recruit-stroke .date {
-  font-size: 13px;
-  font-weight: bold;
-}
-#SchoolRecruit .recruit-stroke .location {
-  font-size: 12px;
 }
 #SchoolRecruit .contact-us .contact-ul {
   padding: 35px 0 0;

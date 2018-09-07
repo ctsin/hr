@@ -40,28 +40,6 @@ a {
   outline: 0;
 }
 
-@media screen and (orientation: landscape) {
-  /*   css[横向定义样式]  */
-}
-
-@media screen and (min-width: 320px) and (max-width: 359px) {
-}
-
-@media screen and (min-width: 360px) and (max-width: 374px) {
-}
-
-@media screen and (min-width: 375px) and (max-width: 413px) {
-}
-@media screen and (min-width: 413px) and (max-width: 500px) {
-}
-
-@media screen and (min-width: 600px) and (max-width: 720px) {
-}
-@media screen and (min-width: 768px) and (max-width: 1000px) {
-}
-@media screen and (min-width: 1024px) and (max-width: 1200px) {
-}
-
 /***********************动画定义*************************/
 
 .a-show0 {
@@ -1028,10 +1006,7 @@ body {
       background-position: -17px 0;
     }
 
-    .sell-er,
-    .guanxi-er,
-    .dev-er,
-    .hr-er {
+    .sell-er {
       width: 49%;
       float: left;
       text-align: center;
@@ -1050,15 +1025,6 @@ body {
     .avatar-seller {
       background-position: 0 0;
     }
-    .avatar-guanxier {
-      background-position: -90px 0;
-    }
-    .avatar-dever {
-      background-position: -270px 0;
-    }
-    .avatar-hr {
-      background-position: -180px 0;
-    }
     .job-name {
       margin-bottom: 20px;
       font-size: 13px;
@@ -1075,22 +1041,8 @@ body {
       background-size: cover;
     }
 
-    .back-jobs {
-      top: 25px;
-      left: 25px;
-    }
-
     .sell-er-bg {
       background-image: url("../img/sell-bg.jpg");
-    }
-    .guanxi-er-bg {
-      background-image: url("../img/guanxi-bg.jpg");
-    }
-    .dev-er-bg {
-      background-image: url("../img/dev-bg.jpg");
-    }
-    .hr-er-bg {
-      background-image: url("../img/hr-bg.jpg");
     }
     .summary {
       margin-top: 30px;
@@ -1177,78 +1129,6 @@ body {
     }
     .row-txt {
       width: 96%;
-    }
-  }
-
-  /*招聘路线日程*/
-  .recruit-stroke {
-    .stroke-wrap {
-      position: relative;
-      margin: 15% auto 0 auto;
-      width: 375px;
-      height: 667px;
-      background-image: url("../img/schedule-bg.png");
-      background-repeat: no-repeat;
-      background-size: 100%;
-    }
-    .schedule-box {
-      position: absolute;
-      opacity: 0;
-      width: 90px;
-      height: 58px;
-      padding: 6px 5px 0;
-      text-align: center;
-      border: 1px solid #fc9f31;
-      border-radius: 5px;
-      color: #323232;
-      background-color: #fffefb;
-      &:after {
-        content: "";
-        position: absolute;
-        left: 0;
-        bottom: -15px;
-        width: 100px;
-        height: 15px;
-        background-image: url("../img/box-foot.png");
-        background-repeat: no-repeat;
-        background-size: 100%;
-      }
-    }
-    .schedule-one {
-      top: -26px;
-      left: 70px;
-    }
-    .schedule-two {
-      top: 0px;
-      left: 244px;
-    }
-    .schedule-three {
-      top: 100px;
-      left: 134px;
-    }
-    .schedule-four {
-      top: 206px;
-      left: 34px;
-    }
-    .schedule-five {
-      top: 215px;
-      left: 236px;
-    }
-    .schedule-six {
-      top: 310px;
-      left: 170px;
-    }
-    .schedule-seven {
-      top: 380px;
-      left: 70px;
-    }
-
-    .date {
-      font-size: 13px;
-      font-weight: bold;
-    }
-    .location {
-      font-size: 12px;
     }
   }
 
