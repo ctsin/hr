@@ -36,6 +36,7 @@
     "eslint-config-recommended": "^3.0.0",
     "eslint-plugin-prettier": "^2.6.2",
     "fis-parser-babel-6.x": "^6.24.1",
+    "fis-parser-less-2.x": "^0.1.4",
     "fis-parser-node-sass": "^1.0.3",
     "fis3": "^3.4.39",
     "fis3-hook-relative": "^2.0.3",

@@ -1,10 +1,512 @@
-extend partials/layout.pug
+extend partials/layout
 
 block title
-  title 开始
+  title 2019人力资源校园招聘
 
 block main
-  .starter(data-before="一片空白，", data-after="是为了重新开始。")
+  #SchoolRecruit.swiper-container
+    .swiper-wrapper
+      .swiper-slide.home-page
+        .index-title
+        .recruit-btn 校招职位
+        .hat
+        .boy
+        .girl
+        .school
+      .swiper-slide.group-info
+        #GroupSlide.swiper-container
+          .swiper-wrapper
+            .swiper-slide
+              .big-title 集团介绍
+              .turntable
+                .zichan
+                .touzi
+                .yatai
+              .group-introduction 成立于 2003年10月 ，中国领先的小微金融服务企业，致力于通过微贷技术服务协助银行等金融机构为小微企业主、个体商户及工薪阶层提供快速简便、免抵押、免担保的小额贷款服务。
+              .group-introduction 经过十四年的发展，中安信业已成长为一家多元化的金融集团公司。
+            .swiper-slide
+              .big-title 发展历程
+              .growth-process
+                .key-node.three
+                  .growth-pic
+                  .growth-txt
+                    .growth-years 2003
+                    .growth-events 中安信业公司成立
+                .key-node.eight
+                  .growth-pic
+                  .growth-txt
+                    .growth-years 2008
+                    .growth-events 世界银行国际金融
+                      br
+                      | 公司入股中安
+                .key-node.ten
+                  .growth-pic
+                  .growth-txt
+                    .growth-years 2010
+                    .growth-events 成为小贷行业
+                      br
+                      | 会长单位
+                .key-node.twelve
+                  .growth-pic
+                  .growth-txt
+                    .growth-years 2012
+                    .growth-events 联合创办深圳龙岗
+                      br
+                      | 国安村镇银行
+                .key-node.fourteen
+                  .growth-pic
+                  .growth-txt
+                    .growth-years 2014
+                    .growth-events 成功接入中国人民
+                      br
+                      | 银行征信系统
+                .key-node.sixteen
+                  .growth-pic
+                  .growth-txt
+                    .growth-years 2016
+                    .growth-events 成功上线自动
+                      br
+                      | 授信功能
+            .swiper-slide 
+              .big-title 集团荣誉
+              .honor-pic
+              ul.honor-ul
+                li.honor-li
+                  .years 2017年
+                  .event 前程无忧2017人力资源管理杰出奖
+                li.honor-li
+                  .years 2010-2016年
+                  .event 连续三年最佳雇主深圳30强
+                  .event 连续六年获评南方资信AAA资信等级
+                  .event 第三届中国财经峰会“2014最佳品牌形象奖”
+                  .event 中国金融风云榜“最值得信赖金融服务机构奖”
+                li.honor-li
+                  .years 2009年
+                  .event 金融创新奖
+          .floor-base
+          .building1
+          .building2
+          .rider
+          .arrow-btn.arrow-toLeft.flip-page-left
+          .arrow-btn.arrow-toRight.flip-page-right
+      .swiper-slide.industry-status
+        .big-title 行业地位
+        .status-head
+          .status-building
+            //- img(src="", alt="")
+          .status-technology
+          .status-culture
+          .status-manage
+        .status-main
+          .status-subtitle 领先的管理
+          .status-info 
+            | 来自美国、德国、马来西亚、中国香港、中国台湾等多个国家的高管，
+            span.focus 90%
+            | 的高管连续多年被评为前海高端与紧缺人才。
+          .status-subtitle 领先的技术
+          .status-info 
+            | 近五年，为市场培养
+            span.focus 近千名
+            | 具有LBD资质的人才，风险控制率同行
+            span.focus 遥遥领先。
+          .status-subtitle 领先的文化
+          .status-info  
+            | 成立至今，累计为
+            span.focus 数十万
+            | 客户提供优质化的服务，支持了
+            span.focus 近百万
+            | 就业，累计赞助近
+            span.focus 400万
+            | 金额的物质回馈社会。
+      .swiper-slide.pay-welfare
+        #WelfareSlide.swiper-container
+          .swiper-wrapper
+            .swiper-slide
+              .big-title 薪酬福利
+              .welfare-subtitle 全面薪酬 注重长期发展
+              .short-line
+              .human-avater.avater-qiu
+              .human-name 邱春伟
+              .job-title-entry-time 南山分行业务主管    2014年3月入职 
+              .personal-monologue 大学专业是会计学，择业时考虑到个人兴趣与发展，选择加入中安成为一名信贷员。入职三年多以来，自己的收入与收获都是成正比例增长。和自己的大学同学相比，他们大部分还是做着原来的会计岗位，收入增幅不大，而我在公司公平的薪酬体系下，通过自己的努力，月收入也从原来的4位数提高到5位数，消费水平与交际圈也提升了一个档次。 
+            .swiper-slide
+              .big-title 培训体系
+              .welfare-subtitle 分阶段、定制化系统培训
+              .short-line
+              .human-avater.avater-yang
+              .human-name 杨荣华
+              .job-title-entry-time 长沙岳麓分行副经理        2014年3月入职
+              .personal-monologue 入职培训让我认识并走进中安，迅速开展工作；学习教练课程让我能更好的帮助新员工成长；TTT1、TTT2课程让我成长为更专业的带教老师；3G培训、老板贷培训让我成长为一名优秀的考察和风控专家；管理课程帮助我管理能力提升，打造卓越的团队。经过公司的系统培训不仅使我的工作能力得到很大提升，也让我沟通能力更强、格局更大、思路更清晰。
+            .swiper-slide
+              .big-title 职业发展
+              .welfare-subtitle 多元化发展通道 100%内部晋升
+              .short-line
+              .human-avater.avater-lai
+              .human-name 赖长超
+              .job-title-entry-time 福永分行业务主管      2014年2月入职
+              .personal-monologue 2014年2月进入中安实习，8月成为中安正式员工，2016年1月晋升业务主管，2017年9月参与公司人才测评，有望进入经理人才库。公司完善的人才储备制度，使我有机会在短短3年时间内从一个刚毕业的愣头青参与到分行的直接管理，开启自我管理梦想的大门。
+          .arrow-btn.arrow-toLeft.flip-page-left
+          .arrow-btn.arrow-toRight.flip-page-right
+      .swiper-slide.recruit-job
+        .job-index
+          .job-head
+            .big-title 招聘岗位
+            .aircraft
+            .person1(style="animation-delay:2.2s")
+            .person2(style="animation-delay:2.4s")
+            .person3(style="animation-delay:2.6s")
+          .job-type-box
+            .sell-er
+              .job-avatar.avatar-seller
+              .job-name 销售代表
+            .guanxi-er
+              .job-avatar.avatar-guanxier
+              .job-name 客户关系专员
+            .dev-er
+              .job-avatar.avatar-dever
+              .job-name 初级开发工程师
+            .hr-er
+              .job-avatar.avatar-hr
+              .job-name 人力资源实习生
+        #sell-er.job-detail(style="display:none") 
+          .position-overview.sell-er-bg
+            .arrow-btn.arrow-toLeft.back-jobs
+            .big-title 销售代表
+            .summary
+              .departments.icon.icon-dep 招聘部门：区域分公司
+              .need-howmany.icon.icon-hownmany 招聘人数：100人
+              .work-place.icon.icon-place 工作地点：全国
+          .position-duties
+            .position-subtitle.icon.icon-duty 工作职责
+            ul
+              li.row
+                .row-number 1.
+                .row-txt 客户开发：开拓销售渠道，寻找和开发客户，销售公司产品；
+              li.row
+                .row-number 2.
+                .row-txt 客户考察：受理客户贷款申请，并对客户贷款申请进行调查、分析、评估和初审；
+              li.row
+                .row-number 3.
+                .row-txt 客户跟进：跟进客户偿还贷款；
+              li.row
+                .row-number 4.
+                .row-txt 客户维护：为客户提供优质的贷前、贷中及贷后服务。
+          .position-requirements
+            .position-subtitle.icon.icon-require 任职要求
+            ul
+              li.row
+                .row-number 1.
+                .row-txt 性别不限，大专及以上学历，金融、经济、财务、工商管理、市场营销等专业优先；
+              li.row
+                .row-number 2.
+                .row-txt 良好的销售技巧、沟通影响力、信息收集力、数据分析力和团队合作力；
+              li.row
+                .row-number 3.
+                .row-txt 目标、市场和服务导向强；
+              li.row
+                .row-number 4.
+                .row-txt 工作积极、主动，有高度的责任心和良好的职业操守。
+        #guanxi-er.job-detail(style="display:none")
+          .position-overview.guanxi-er-bg
+            .arrow-btn.arrow-toLeft.back-jobs
+            .big-title 客户关系专员
+            .summary
+              .departments.icon.icon-dep 招聘部门：区域中心
+              .need-howmany.icon.icon-hownmany 招聘人数：6人
+              .work-place.icon.icon-place 工作地点：深圳
+          .position-duties
+            .position-subtitle.icon.icon-duty 工作职责
+            ul
+              li.row
+                .row-number 1.
+                .row-txt 通过多元化的沟通方式与客户建立信任关系，建立及维护客户档案； 
+              li.row
+                .row-number 2.
+                .row-txt 了解客户需求，为客户提供建议或制定解决方案；
+              li.row
+                .row-number 3.
+                .row-txt 定期对客户进行回访，维护良好的客户关系，提升客户满意度；
+              li.row
+                .row-number 4.
+                .row-txt 帮助公司与客户建立长期合作的关系，提升公司整体业绩表现。
+          .position-requirements
+            .position-subtitle.icon.icon-require 任职要求
+            ul
+              li.row
+                .row-number 1.
+                .row-txt 工作热情、积极主动、责任心强、抗压性强，乐于接受挑战；
+              li.row
+                .row-number 2.
+                .row-txt 良好的服务意识、沟通协调能力，团队合作精神；
+              li.row
+                .row-number 3.
+                .row-txt 较强的观察应变能力、学习能力。
+        #dev-er.job-detail(style="display:none")
+          .position-overview.dev-er-bg
+            .arrow-btn.arrow-toLeft.back-jobs
+            .big-title 初级开发工程师
+            .summary
+              .departments.icon.icon-dep 招聘部门：电脑信息部
+              .need-howmany.icon.icon-hownmany 招聘人数：5人
+              .work-place.icon.icon-place 工作地点：深圳
+          .position-duties
+            .position-subtitle.icon.icon-duty 工作职责
+            ul
+              li.row
+                .row-number 1.
+                .row-txt 负责公司互联网项目及核心业务系统的开发和维护；
+              li.row
+                .row-number 2.
+                .row-txt 其他相关IT系统的搭建，开发和支持；
+              li.row
+                .row-number 3.
+                .row-txt 公司IT文档体系建设； 
+              li.row
+                .row-number 4.
+                .row-txt 其他需要IT支持的工作。
+          .position-requirements
+            .position-subtitle.icon.icon-require 任职要求
+            ul
+              li.row
+                .row-number 1.
+                .row-txt 计算机相关专业，本科及以上学历，有扎实的数据结构、算法、数据库原理、网络原理知识基础；
+              li.row
+                .row-number 2.
+                .row-txt 熟悉JAVA或.NET开发技术，掌握 B/S和C/S开发技能；
+              li.row
+                .row-number 3.
+                .row-txt 熟悉基于MySQL、ORACLE、SQL Server等主流数据库的开发及应用； 
+              li.row
+                .row-number 4.
+                .row-txt 为人勤奋踏实，工作态度严谨认真，有良好的理解能力和自主学习能力。
+        #hr-er.job-detail(style="display:none")
+          .position-overview.hr-er-bg
+            .arrow-btn.arrow-toLeft.back-jobs
+            .big-title 人才资源实习生
+            .summary
+              .departments.icon.icon-dep 招聘部门：人力资源部
+              .need-howmany.icon.icon-hownmany 招聘人数：2人
+              .work-place.icon.icon-place 工作地点：深圳
+          .position-duties
+            .position-subtitle.icon.icon-duty 工作职责
+            ul
+              li.row
+                .row-number 1.
+                .row-txt 协助通知面试，面试组织安排，面试资料收集；
+              li.row
+                .row-number 2.
+                .row-txt 录用人员跟踪报到，入职人员分配；
+              li.row
+                .row-number 3.
+                .row-txt 领导安排的其他工作。   
+          .position-requirements
+            .position-subtitle.icon.icon-require 任职要求
+            ul
+              li.row
+                .row-number 1.
+                .row-txt 本科及以上学历（2018或2019年毕业），专业不限，人力资源相关专业优先；
+              li.row
+                .row-number 2.
+                .row-txt 熟练使用办公软件（office系列，如excel、word等） ；
+              li.row
+                .row-number 3.
+                .row-txt 积极主动，热情阳光，责任心强，具有良好的沟通能力和良好的团队合作精神 。
+      .swiper-slide.recruit-stroke
+        .big-title 校招行程
+        .stroke-wrap
+          .stroke-main
+            .schedule-box.schedule-one
+              .schedule-body 
+                .date 9月21日
+                .location 北京大学
+                  br 
+                  | XXXXXXX礼堂
+              .schedule-foot
+            .schedule-box.schedule-two
+              .schedule-body 
+                .date 9月22日
+                .location 北京大学
+                  br
+                  | XXXXXXX礼堂
+              .schedule-foot
+            .schedule-box.schedule-three
+              .schedule-body 
+                .date 9月23日
+                .location 北京大学
+                  br
+                  | XXXXXXX礼堂
+              .schedule-foot
+            .schedule-box.schedule-four
+              .schedule-body 
+                .date 9月24日
+                .location 北京大学
+                  br
+                  | XXXXXXX礼堂
+              .schedule-foot
+            .schedule-box.schedule-five
+              .schedule-body 
+                .date 9月25日
+                .location 北京大学
+                  br
+                  | XXXXXXX礼堂
+              .schedule-foot
+            .schedule-box.schedule-six
+              .schedule-body 
+                .date 9月26日
+                .location 北京大学
+                  br
+                  | XXXXXXX礼堂
+              .schedule-foot
+            .schedule-box.schedule-seven
+              .schedule-body 
+                .date 9月27日
+                .location 北京大学
+                  br
+                  | XXXXXXX礼堂
+              .schedule-foot
+      .swiper-slide.contact-us
+        .fireworks(style="top:6%;left:15%;animation-delay:.3s;")
+        .fireworks(style="top:16%;left:65%;animation-delay:.6s;")
+        ul.contact-ul
+          li.contact-li
+            .contact-key.icon.icon-email 投递邮箱
+            .contact-value zac_hr@zac.cn
+          li.contact-li
+            .contact-key.icon.icon-tel 联系电话
+            .contact-value 0755-83885913
+          li.contact-li
+            .contact-key.icon.icon-address 联系地址
+            .contact-value 深圳市福田区深南大道7028号
+              br
+              | 时代科技大厦9楼
+        .follow-zac
+          .wechat-img
+            .clound1
+            .clound2
+            .fireworks
+            img(src="content/images/QR-code.png", alt="", width="100%",style="position: absolute;z-index:666")
+    .to-down-btn.a-drop.a-float-arrow
 
-block individual-script
-  script(src="../js/main.js")
+  script.
+    $(function() {
+      $(".index-title").addClass("a-fadeinT-indexTitle");			
+      $(".hat").addClass("a-bouncein-hat");
+      $(".boy").addClass("a-fadeinB-boy");
+      $(".girl").addClass("a-fadeinB-boy");
+      $(".grassland").addClass("a-fadein");
+      $(".school").addClass("a-fadeinB-school");
+
+      //- 主滑动块
+      var swiperSchoolRecruit = new Swiper('#SchoolRecruit', {
+        //- pagination: '.swiper-pagination-v',
+        //- paginationClickable: true,
+        direction: 'vertical',
+        initialSlide :0,
+        onSlideChangeStart:function(swiper){
+          if(swiper.activeIndex=='0') { //- 首页
+            $(".index-title").addClass("a-fadeinT-indexTitle");
+            $(".hat").addClass("a-bouncein-hat");
+            $(".boy").addClass("a-fadeinB-boy");
+            $(".girl").addClass("a-fadeinB-boy");
+            $(".grassland").addClass("a-fadein");
+            $(".school").addClass("a-fadeinB-school");
+          }
+          if(swiper.activeIndex=='1') { //- 集团信息
+            $(".floor-base").addClass("a-fadein");
+            $(".building1").addClass("a-fadeinB");
+            $(".building2").addClass("a-fadeinB");
+            $(".rider ").addClass("a-driving");
+
+            $(".zichan").addClass("a-ripple");
+            $(".touzi").addClass("a-ripple");
+            $(".yatai").addClass("a-ripple");
+          }
+          if(swiper.activeIndex=='2') { //- 行业地位
+            $(".status-building").addClass("a-float-updown");
+            $(".status-technology").addClass("a-enlarge");
+            $(".status-culture").addClass("a-enlarge");
+            $(".status-manage ").addClass("a-enlarge");
+          }
+          if(swiper.activeIndex=='3') { //- 薪酬福利
+            $(".human-avater").addClass("a-enlarge");
+          }
+          if(swiper.activeIndex=='4') { //- 招聘岗位
+            $(".aircraft").addClass("a-flying");
+            $(".person1").addClass("a-fadeinT-person");
+            $(".person2").addClass("a-fadeinT-person");
+            $(".person3").addClass("a-fadeinT-person");
+          }
+          if(swiper.activeIndex=='5') { //- 校招行程			
+            $(".schedule-one").addClass("a-show0");
+            $(".schedule-two").addClass("a-show1");
+            $(".schedule-three").addClass("a-show2");
+            $(".schedule-four").addClass("a-show3");
+            $(".schedule-five").addClass("a-show4");
+            $(".schedule-six").addClass("a-show5");
+            $(".schedule-seven").addClass("a-show6");
+          }
+          if(swiper.activeIndex=='6') { //- 联系我们		
+            $(".clound1").addClass("a-float-updown");
+            $(".clound2").addClass("a-float-lr");
+            $(".fireworks").addClass("a-enlarge-fireworks");
+          }
+        },
+      });
+
+      //- 集团信息滑动块
+      var swiperGroupSlide = new Swiper('#GroupSlide', {
+        pagination: '.swiper-pagination-h',
+        paginationClickable: true,
+        //- loop: true,
+        //- autoplay: 3000,
+        autoplayDisableOnInteraction:false,
+        onSlideChangeStart:function(swiper){
+          if(swiper.activeIndex=='1') {
+            $(".three").show(500);
+            $(".eight").show(1000);
+            $(".ten").show(1500);
+            $(".twelve").show(2000);
+            $(".fourteen").show(2500);
+            $(".sixteen").show(3000);
+          }					
+        }
+      });
+
+      //- 薪酬福利滑动块
+      var swiperWelfareSlide = new Swiper('#WelfareSlide', {
+        pagination: '.swiper-pagination-h',
+        paginationClickable: true,
+        //- loop: true,
+        //- autoplay: 4000,
+        autoplayDisableOnInteraction:false,
+      });
+
+
+      //- 显示职位详情
+      $(".sell-er").on('click',function(e){
+        $(".job-index").hide();
+        $("#sell-er").show();
+        e.preventDefault();
+      });
+      $(".guanxi-er").on('click',function(e){
+        $(".job-index").hide();
+        $("#guanxi-er").show();
+        e.preventDefault();
+      });
+      $(".dev-er").on('click',function(e){
+        $(".job-index").hide();
+        $("#dev-er").show();
+        e.preventDefault();
+      });
+      $(".hr-er").on('click',function(e){
+        $(".job-index").hide();
+        $("#hr-er").show();
+        e.preventDefault();
+      });			
+      //- 返回招聘岗位
+      $(".back-jobs").on('touchend',function(e){
+        $(this).parent().parent().hide();
+        $(".job-index").show();
+        e.preventDefault();
+      });
+    });

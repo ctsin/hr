@@ -1,0 +1,1373 @@
+body,
+div,
+dl,
+dt,
+dd,
+ul,
+ol,
+li,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+form,
+fieldset,
+legend,
+input,
+button,
+textarea,
+p,
+th,
+td {
+  margin: 0;
+  padding: 0;
+}
+
+li {
+  list-style: none;
+}
+
+img {
+  vertical-align: middle;
+  border: 0;
+}
+
+a {
+  color: #fff;
+  text-decoration: none;
+  outline: 0;
+}
+
+@media screen and (orientation: landscape) {
+  /*   css[横向定义样式]  */
+}
+
+@media screen and (min-width: 320px) and (max-width: 359px) {
+}
+
+@media screen and (min-width: 360px) and (max-width: 374px) {
+}
+
+@media screen and (min-width: 375px) and (max-width: 413px) {
+}
+@media screen and (min-width: 413px) and (max-width: 500px) {
+}
+
+@media screen and (min-width: 600px) and (max-width: 720px) {
+}
+@media screen and (min-width: 768px) and (max-width: 1000px) {
+}
+@media screen and (min-width: 1024px) and (max-width: 1200px) {
+}
+
+/***********************动画定义*************************/
+
+.a-show0 {
+  //- 校招行程页面 学校1
+  animation: show 100ms linear 0.5s forwards;
+}
+.a-show1 {
+  //- 校招行程页面 学校2
+  animation: show 100ms linear 1s forwards;
+}
+.a-show2 {
+  //- 校招行程页面 学校3
+  animation: show 100ms linear 1.5s forwards;
+}
+.a-show3 {
+  //- 校招行程页面 学校4
+  animation: show 100ms linear 2s forwards;
+}
+.a-show4 {
+  //- 校招行程页面 学校5
+  animation: show 100ms linear 2.5s forwards;
+}
+.a-show5 {
+  //- 校招行程页面 学校6
+  animation: show 100ms linear 3s forwards;
+}
+.a-show6 {
+  //- 校招行程页面 学校7
+  animation: show 100ms linear 3.5s forwards;
+}
+
+.a-fadeinT-person {
+  //- 校招岗位页面从天而降的小人儿
+  animation: fadeinT 900ms ease-in-out backwards;
+}
+.a-flying {
+  //- 妈呀飞机
+  animation: flying 1s linear 1s forwards;
+}
+
+.a-driving {
+  //- 行走的单车
+  animation: driving 3s linear forwards;
+}
+
+.a-enlarge-fireworks {
+  //- 关于我们页面绽放的烟花
+  animation: enlarge-fireworks 2s ease-in-out forwards infinite;
+}
+.a-drop {
+  //- 首页从天而降的导向箭头
+  animation: drop 1.5s ease 1s forwards;
+}
+.a-float-arrow {
+  //- 首页上下浮动的导向箭头
+  animation: float-arrow 1.5s 1.5s linear infinite;
+}
+.a-float-updown {
+  //- 上下来回浮动
+  animation: float-updown 3s 0.2s linear infinite;
+}
+.a-float-lr {
+  //- 左右来回浮动
+  animation: float-lr 4s 0.2s linear infinite;
+}
+.a-bouncein-hat {
+  //- 帽子渐入
+  animation: bouncein 1s ease-out backwards;
+}
+.a-fadeinB-boy {
+  //- 首页学生从底部渐入
+  animation: fadeinB 500ms ease-out 500ms backwards;
+}
+.a-fadeinT-indexTitle {
+  //- 首页标题从天而降
+  animation: fadeinT 200ms ease-out backwards;
+}
+.a-fadeinB-school {
+  //- 首页学校草地从底部入场
+  animation: fadeinB 500ms ease-out backwards;
+}
+
+.a-ripple {
+  //-放大缩小透明度改变
+  animation: breath 3s linear infinite;
+  @keyframes breath {
+    0% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+    50% {
+      opacity: 1;
+      transform: scale(1.1);
+    }
+    100% {
+      opacity: 0.8;
+      transform: scale(1);
+    }
+  }
+}
+
+.a-enlarge {
+  //-放大缩小透明度不变
+  animation: enlarge 3s linear infinite;
+  @keyframes enlarge {
+    0% {
+      transform: scale(1);
+    }
+    50% {
+      transform: scale(1.1);
+    }
+    100% {
+      transform: scale(1);
+    }
+  }
+}
+
+/*下掉*/
+@keyframes drop {
+  0% {
+    top: -8vh;
+  }
+  100% {
+    top: 90%;
+  }
+}
+
+/* 弹入 */
+@keyframes bouncein {
+  0% {
+    opacity: 0;
+    transform: scale(0.3);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1.05);
+  }
+  70% {
+    transform: scale(0.9);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+/*从上淡入*/
+@keyframes fadeinT {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* 空降 */
+@keyframes bounceinT {
+  0% {
+    opacity: 0;
+    transform: translateY(-100px);
+  }
+  60% {
+    opacity: 1;
+    transform: translateY(30px);
+  }
+  80% {
+    transform: translateY(-10px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+/* 上下摆动*/
+@keyframes updown {
+  0% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  30% {
+    transform: translate3d(0, -4px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 4px, 0);
+  }
+}
+
+/*放大*/
+@keyframes enlarge-fireworks {
+  0% {
+    opacity: 0;
+    transform: scale(0.4);
+  }
+  70% {
+    opacity: 1;
+    transform: scale(1.2);
+  }
+  90% {
+    opacity: 0;
+    transform: scale(1.2);
+  }
+  100% {
+    opacity: 0;
+    transform: scale(0);
+  }
+}
+
+/*单车行驶*/
+@keyframes driving {
+  0% {
+    left: -25%;
+  }
+  100% {
+    left: 25%;
+  }
+}
+
+/*从底部淡入*/
+@keyframes fadeinB {
+  0% {
+    opacity: 0;
+    transform: translateY(100px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*上下浮动*/
+@keyframes float-updown {
+  0% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  30% {
+    transform: translate3d(0, -3px, 0);
+  }
+
+  90% {
+    transform: translate3d(0, 3px, 0);
+  }
+}
+
+/*左右浮动*/
+@keyframes float-lr {
+  0% {
+    transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1);
+    transform: translate3d(0, 0, 0);
+  }
+  30% {
+    transform: translate3d(-3px, 0, 0);
+  }
+
+  90% {
+    transform: translate3d(3px, 0, 0);
+  }
+}
+
+/*上下浮动的主导向箭头*/
+@keyframes float-arrow {
+  0% {
+    top: 89%;
+  }
+  100% {
+    top: 90%;
+  }
+}
+
+/*飞行*/
+@keyframes flying {
+  0% {
+    transform: translate3d(-10vw, 0, 0);
+  }
+  100% {
+    transform: translate3d(50vw, 0, 0);
+  }
+}
+
+@keyframes show {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+
+/************************动画完************************/
+
+html {
+  height: 100%;
+}
+body {
+  height: 100%;
+  position: relative;
+  font-family: "Helvetica", "Arial";
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+
+//CSS3位置变化
+.translate(@x, @y) {
+  -webkit-transform: translate(@x, @y);
+  -moz-transform: translate(@x, @y);
+  -ms-transform: translate(@x, @y);
+  -o-transform: translate(@x, @y);
+  transform: translate(@x, @y);
+}
+
+// 单行文字纵向居中
+.middle (@height) {
+  height: @height;
+  line-height: @height;
+}
+
+// 清除浮动
+.clearfix() {
+  *zoom: 1;
+  &:before,
+  &:after {
+    content: " ";
+    display: table;
+    line-height: 0;
+  }
+  &:after {
+    clear: both;
+  }
+}
+
+//- .home-page 首屏
+//- .group-info 集团信息
+//- .industry-status 行业状态
+//- .pay-welfare 薪酬福利
+//- .recruit-job 校招岗位
+//- .recruit-stroke 校招行程
+//- .contact-us 联系我们
+#SchoolRecruit {
+  position: relative;
+  height: 100%;
+  .home-page,
+  .group-info,
+  .industry-status,
+  .pay-welfare,
+  .recruit-job,
+  .recruit-stroke,
+  .contact-us {
+    height: 100% !important;
+    background-repeat: no-repeat;
+    //background-size: 100vw 100vh;
+    background-size: cover;
+    .swiper-slide {
+      height: 100% !important;
+    }
+  }
+
+  #GroupSlide,
+  #WelfareSlide,
+  .jobs {
+    height: 100%;
+  }
+
+  .home-page {
+    background-image: url("../img/bg-1.jpg");
+  }
+  .group-info {
+    background-image: url("../img/bg-2.jpg");
+  }
+  .industry-status {
+    background-image: url("../img/bg-2.jpg");
+  }
+  .pay-welfare {
+    background-image: url("../img/bg-4.jpg");
+  }
+  .recruit-stroke {
+    background-image: url("../img/bg-6.jpg");
+  }
+  .contact-us {
+    background-image: url("../img/bg-7.jpg");
+  }
+
+  .icon {
+    position: relative;
+    &:after {
+      content: "";
+      position: absolute;
+      background-image: url("../img/icon.png");
+      background-repeat: no-repeat;
+      background-size: 40px 100px;
+    }
+  }
+
+  .arrow-btn {
+    position: absolute;
+    width: 14px;
+    height: 14px;
+    border-top: 2px solid #fff;
+    border-left: 2px solid #fff;
+  }
+  .arrow-toLeft {
+    transform: rotate(-45deg);
+  }
+  .arrow-toRight {
+    transform: rotate(135deg);
+  }
+
+  .flip-page-left {
+    top: 40%;
+    left: 6%;
+  }
+  .flip-page-right {
+    top: 40%;
+    right: 6%;
+  }
+
+  .big-title {
+    padding-top: 20px;
+    font-size: 19px;
+    color: #fff;
+    text-align: center;
+  }
+
+  /*首屏*/
+  .home-page {
+    .index-title {
+      position: absolute;
+      top: 8vh;
+      left: 15vw;
+      width: 286px;
+      height: 179px;
+      background-image: url("../img/title.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .recruit-btn {
+      position: absolute;
+      transform: translateX(-50%);
+      left: 50%;
+      top: 38vh;
+      font-size: 20px;
+      width: 131px;
+      height: 35px;
+      text-align: center;
+      line-height: 35px;
+      background-color: red;
+      border-radius: 5px;
+      color: #fff;
+    }
+    .hat {
+      position: absolute;
+      top: 6vh;
+      right: 4vw;
+      width: 71px;
+      height: 50px;
+      background-image: url("../img/hat.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .boy {
+      position: absolute;
+      bottom: 60px;
+      left: 54vw;
+      z-index: 1;
+      width: 100px;
+      height: 204px;
+      background-image: url("../img/boy.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .girl {
+      position: absolute;
+      bottom: 60px;
+      z-index: 1;
+      left: 20vw;
+      width: 97px;
+      height: 220px;
+      background-image: url("../img/girl.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .grassland {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 142px;
+      background-image: url("../img/grassland.png");
+      background-repeat: no-repeat;
+      background-size: 100vw 142px;
+    }
+    .school {
+      position: absolute;
+      bottom: 0;
+      left: 0;
+      width: 100vw;
+      height: 154px;
+      background-image: url("../img/school.png");
+      background-repeat: no-repeat;
+      background-size: 100vw 154px;
+    }
+  }
+
+  /*集团信息*/
+  .group-info {
+    .floor-base {
+      position: absolute;
+      bottom: 0px;
+      left: 0;
+      width: 100vw;
+      height: 36px;
+      background-image: url("../img/floor-base.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .building1 {
+      position: absolute;
+      bottom: 4px;
+      left: 15px;
+      width: 60px;
+      height: 75px;
+      background-image: url("../img/building1.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .building2 {
+      position: absolute;
+      bottom: 4px;
+      right: 10px;
+      width: 85px;
+      height: 71px;
+      background-image: url("../img/building2.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .rider {
+      position: absolute;
+      bottom: 4px;
+      left: 0;
+      width: 40px;
+      height: 40px;
+      background-image: url("../img/rider.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .turntable {
+      position: relative;
+      width: 217px;
+      height: 210px;
+      margin: 5vh auto;
+      background-image: url("../img/test.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .zichan,
+    .touzi,
+    .yatai {
+      position: absolute;
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .zichan {
+      width: 47px;
+      height: 47px;
+      bottom: 5px;
+      left: 126px;
+      // background-image: url('../img/**.png');
+      //background-color: red;
+    }
+    .touzi {
+      top: 6px;
+      left: 132px;
+      width: 53px;
+      height: 53px;
+      // background-image: url('../img/**.png');
+      //background-color: red;
+    }
+    .yatai {
+      width: 44px;
+      height: 44px;
+      top: 62px;
+      left: 4px;
+      // background-image: url('../img/**.png');
+      //background-color: red;
+    }
+    .honor-pic {
+      margin-bottom: 25px;
+      width: 100vw;
+      height: 199px;
+      background-image: url("../img/honor.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .honor-ul {
+      position: relative;
+      width: 70%;
+      //margin: 0 auto;
+      margin-left: 18%;
+      padding: 0 12px;
+      color: #fff;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: 0;
+        height: 170px;
+        border-left: 1px dotted #fff;
+      }
+    }
+    .honor-li {
+      margin-bottom: 6px;
+    }
+    .years {
+      position: relative;
+      font-size: 13px;
+      &:after {
+        content: "";
+        position: absolute;
+        top: 4px;
+        left: -15px;
+        width: 6px;
+        height: 6px;
+        border-radius: 50%;
+        background-color: #fff;
+      }
+    }
+    .event {
+      position: relative;
+      padding: 0 10px;
+      font-size: 12px;
+      line-height: 18px;
+      .clearfix();
+      &:after {
+        position: absolute;
+        top: 8px;
+        left: 2px;
+        content: "-";
+        color: #fff;
+      }
+    }
+
+    .group-introduction {
+      padding: 6px 40px;
+      font-size: 12px;
+      color: #fff;
+      text-indent: 2em;
+    }
+
+    .growth-process {
+      position: relative;
+      margin: 8vh auto;
+      width: 238px;
+      height: 368px;
+      background-image: url("../img/growing-line.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    .growth-pic,
+    .growth-txt {
+      position: absolute;
+    }
+
+    .growth-pic {
+      top: -28px;
+      left: -60px;
+      width: 58px;
+      height: 58px;
+      background-image: url("../img/growth-pic.png");
+      background-repeat: no-repeat;
+      background-size: 58px 339px;
+    }
+    .growth-txt {
+      width: 100px;
+      top: -12px;
+      left: 12px;
+      color: #ffffff;
+    }
+
+    .key-node {
+      position: absolute;
+      display: none;
+      width: 8px;
+      height: 8px;
+      border-radius: 50%;
+      background-color: #fff;
+    }
+    .three {
+      bottom: -3px;
+      left: 93px;
+      .growth-pic {
+        background-position: 0 -283px;
+      }
+    }
+    .eight {
+      top: 286px;
+      left: 100px;
+      .growth-pic {
+        background-position: 0 -225px;
+      }
+    }
+    .ten {
+      top: 220px;
+      left: 174px;
+      .growth-pic {
+        background-position: 0 -169px;
+      }
+    }
+    .twelve {
+      top: 138px;
+      left: 60px;
+      .growth-pic {
+        background-position: 0 -112px;
+      }
+    }
+    .fourteen {
+      top: 77px;
+      left: 133px;
+      .growth-pic {
+        background-position: 0 -56px;
+      }
+    }
+    .sixteen {
+      top: -4px;
+      left: 110px;
+      .growth-pic {
+        background-position: 0 0;
+      }
+    }
+
+    .growth-years {
+      line-height: 18px;
+      font-size: 12px;
+    }
+    .growth-events {
+      font-size: 11px;
+    }
+  }
+
+  /*行业地位*/
+  .industry-status {
+    color: #fff;
+    .status-head {
+      position: relative;
+      margin: 20px auto;
+      width: 350px;
+      height: 190px;
+      background-image: url("../img/status-head.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    .status-building {
+      position: absolute;
+      top: 18px;
+      left: 26%;
+      width: 126px;
+      height: 120px;
+      background-image: url("../img/status-building.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+
+    .status-technology,
+    .status-culture,
+    .status-manage {
+      position: absolute;
+      width: 67px;
+      height: 67px;
+      border-radius: 50%;
+      background-color: #f2faf9;
+
+      &:before {
+        position: absolute;
+        left: 50%;
+        top: 12px;
+        -webkit-transform: translateX(-50%);
+        transform: translateX(-50%);
+        content: "";
+        height: 25px;
+        width: 25px;
+        background-image: url("../img/status-sprite.png");
+        background-repeat: no-repeat;
+        background-size: 77.5px 25px;
+      }
+      &:after {
+        position: absolute;
+        bottom: 8px;
+        content: "";
+        width: 100%;
+        text-align: center;
+        font-size: 15px;
+        font-weight: bold;
+        color: #009f8a;
+      }
+    }
+
+    .status-technology {
+      top: 80px;
+      left: 10px;
+
+      &:before {
+        background-position: 0 0;
+      }
+      &:after {
+        content: "技术";
+      }
+    }
+    .status-culture {
+      top: 110px;
+      right: 66px;
+
+      &:before {
+        background-position: -26px 0;
+      }
+      &:after {
+        content: "文化";
+      }
+    }
+
+    .status-manage {
+      top: 40px;
+      right: 10px;
+
+      &:before {
+        background-position: -52px 0;
+      }
+      &:after {
+        content: "管理";
+      }
+    }
+
+    .status-main {
+      padding-left: 30px;
+      padding-right: 30px;
+    }
+    .status-subtitle {
+      line-height: 15px;
+      padding: 0 6px;
+      margin-bottom: 5px;
+      font-size: 15px;
+      border-left: 2px solid #fff;
+    }
+    .status-info {
+      font-size: 12px;
+    }
+    .status-info:not(:last-child) {
+      border-bottom: 1px dotted #a8d9cc;
+      margin-bottom: 10px;
+      padding-bottom: 10px;
+    }
+    .focus {
+      font-size: 13px;
+      font-weight: bold;
+      color: #ffcc00;
+    }
+  }
+
+  /*薪酬福利*/
+  .pay-welfare {
+    color: #fff;
+    .welfare-subtitle {
+      margin: 13px auto;
+      font-size: 14px;
+      text-align: center;
+    }
+    .short-line {
+      margin: 0 auto 47px;
+      width: 25%;
+      height: 2px;
+      background-color: #fff;
+    }
+
+    .human-avater {
+      margin: 0 auto;
+      width: 151px;
+      height: 151px;
+      border-radius: 50%;
+      background-image: url("../img/human-avater.png");
+      background-repeat: no-repeat;
+      background-size: 151px 455px;
+    }
+    .avater-qiu {
+      background-position: 0 -302px;
+    }
+    .avater-yang {
+      background-position: 0 -151px;
+    }
+    .avater-lai {
+      background-position: 0 0;
+    }
+    .human-name {
+      margin: 17px auto 9px;
+      text-align: center;
+      font-size: 24px;
+    }
+    .job-title-entry-time {
+      margin-bottom: 30px;
+      text-align: center;
+      font-size: 13px;
+    }
+    .personal-monologue {
+      margin: 0 auto;
+      width: 87%;
+      padding-bottom: 4px;
+      text-indent: 2em;
+      line-height: 20px;
+      font-size: 12px;
+    }
+  }
+
+  /*招聘职位*/
+  .recruit-job {
+    .job-head {
+      height: 174px;
+      background-image: url("../img/job-info-head.jpg");
+      background-repeat: no-repeat;
+      background-size: 100%;
+      background-position: center;
+    }
+
+    .aircraft {
+      position: absolute;
+      top: 56px;
+      left: -40%;
+      width: 160px;
+      height: 38px;
+      background-image: url("../img/aircraft.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .person1 {
+      position: absolute;
+      top: 106px;
+      left: 136px;
+      width: 16px;
+      height: 50px;
+      background-image: url("../img/person.png");
+      background-repeat: no-repeat;
+      background-size: 69px 48px;
+      background-position: 0;
+    }
+    .person2 {
+      position: absolute;
+      top: 122px;
+      left: 260px;
+      width: 17px;
+      height: 48px;
+      background-image: url("../img/person.png");
+      background-repeat: no-repeat;
+      background-size: 69px 48px;
+      background-position: -44px 0;
+    }
+    .person3 {
+      position: absolute;
+      top: 90px;
+      left: 212px;
+      width: 26px;
+      height: 49px;
+      background-image: url("../img/person.png");
+      background-repeat: no-repeat;
+      background-size: 69px 48px;
+      background-position: -17px 0;
+    }
+
+    .sell-er,
+    .guanxi-er,
+    .dev-er,
+    .hr-er {
+      width: 49%;
+      float: left;
+      text-align: center;
+    }
+    .job-type-box {
+      .clearfix();
+    }
+    .job-avatar {
+      margin: 38px auto 20px;
+      height: 90px;
+      width: 90px;
+      background-image: url("../img/job-type.png");
+      background-repeat: no-repeat;
+      background-size: 360px 90px;
+    }
+    .avatar-seller {
+      background-position: 0 0;
+    }
+    .avatar-guanxier {
+      background-position: -90px 0;
+    }
+    .avatar-dever {
+      background-position: -270px 0;
+    }
+    .avatar-hr {
+      background-position: -180px 0;
+    }
+    .job-name {
+      margin-bottom: 20px;
+      font-size: 13px;
+      color: #323232;
+    }
+    .job-detail {
+      background-color: #ebebeb;
+    }
+    .position-overview {
+      height: 200px;
+      position: relative;
+      padding-bottom: 25px;
+      background-repeat: no-repeat;
+      background-size: cover;
+    }
+
+    .back-jobs {
+      top: 25px;
+      left: 25px;
+    }
+
+    .sell-er-bg {
+      background-image: url("../img/sell-bg.jpg");
+    }
+    .guanxi-er-bg {
+      background-image: url("../img/guanxi-bg.jpg");
+    }
+    .dev-er-bg {
+      background-image: url("../img/dev-bg.jpg");
+    }
+    .hr-er-bg {
+      background-image: url("../img/hr-bg.jpg");
+    }
+    .summary {
+      margin-top: 30px;
+      font-size: 13px;
+      color: #fff;
+      width: 50%;
+      margin-left: 50%;
+    }
+    .departments,
+    .need-howmany,
+    .work-place {
+      line-height: 30px;
+    }
+    .position-duties,
+    .position-requirements {
+      margin-top: 5px;
+      padding: 16px;
+      background-color: #fff;
+    }
+    .position-subtitle {
+      line-height: 30px;
+      font-size: 14px;
+      color: #323232;
+    }
+    .icon-dep {
+      &:after {
+        top: 6px;
+        left: -25px;
+        width: 16px;
+        height: 16px;
+        background-position: -20px 0;
+      }
+    }
+    .icon-hownmany {
+      &:after {
+        top: 6px;
+        left: -25px;
+        width: 16px;
+        height: 16px;
+        background-position: -20px -20px;
+      }
+    }
+    .icon-place {
+      &:after {
+        top: 6px;
+        left: -25px;
+        width: 16px;
+        height: 18px;
+        background-position: -20px -40px;
+      }
+    }
+    .icon-duty {
+      padding-left: 20px;
+      &:after {
+        top: 6px;
+        left: 0;
+        width: 15px;
+        height: 16px;
+        background-position: -20px -60px;
+      }
+    }
+    .icon-require {
+      padding-left: 20px;
+      &:after {
+        top: 6px;
+        left: 0;
+        width: 16px;
+        height: 16px;
+        background-position: -16px -80px;
+      }
+    }
+    .row {
+      .clearfix();
+      line-height: 20px;
+      font-size: 12px;
+      color: #787878;
+    }
+    .row-number,
+    .row-txt {
+      float: left;
+    }
+    .row-number {
+      width: 4%;
+    }
+    .row-txt {
+      width: 96%;
+    }
+  }
+
+  /*招聘路线日程*/
+  .recruit-stroke {
+    .stroke-wrap {
+      position: relative;
+      margin: 15% auto 0 auto;
+      width: 375px;
+      height: 667px;
+      background-image: url("../img/schedule-bg.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .schedule-box {
+      position: absolute;
+      opacity: 0;
+      width: 90px;
+      height: 58px;
+      padding: 6px 5px 0;
+      text-align: center;
+      border: 1px solid #fc9f31;
+      border-radius: 5px;
+      color: #323232;
+      background-color: #fffefb;
+      &:after {
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: -15px;
+        width: 100px;
+        height: 15px;
+        background-image: url("../img/box-foot.png");
+        background-repeat: no-repeat;
+        background-size: 100%;
+      }
+    }
+    .schedule-one {
+      top: -26px;
+      left: 70px;
+    }
+    .schedule-two {
+      top: 0px;
+      left: 244px;
+    }
+    .schedule-three {
+      top: 100px;
+      left: 134px;
+    }
+    .schedule-four {
+      top: 206px;
+      left: 34px;
+    }
+    .schedule-five {
+      top: 215px;
+      left: 236px;
+    }
+    .schedule-six {
+      top: 310px;
+      left: 170px;
+    }
+    .schedule-seven {
+      top: 380px;
+      left: 70px;
+    }
+
+    .date {
+      font-size: 13px;
+      font-weight: bold;
+    }
+    .location {
+      font-size: 12px;
+    }
+  }
+
+  /*联系我们*/
+  .contact-us {
+    .contact-ul {
+      padding: 35px 0 0;
+    }
+    .contact-li {
+      margin-bottom: 24px;
+      text-align: center;
+      color: #fff;
+    }
+    .contact-key {
+      margin: 0 auto;
+      width: 100px;
+      line-height: 24px;
+      font-size: 16px;
+    }
+    .contact-value {
+      color: #fff !important;
+      font-size: 15px;
+    }
+    .icon-email {
+      &:after {
+        top: 4px;
+        left: -5px;
+        width: 18px;
+        height: 18px;
+        background-position: 0 0;
+      }
+    }
+    .icon-tel {
+      &:after {
+        top: 1px;
+        left: -5px;
+        width: 20px;
+        height: 20px;
+        background-position: 0 -20px;
+      }
+    }
+    .icon-address {
+      &:after {
+        top: 2px;
+        left: -5px;
+        width: 16px;
+        height: 16px;
+        background-position: 0 -40px;
+      }
+    }
+
+    .more-info,
+    .please-attention {
+      text-align: center;
+    }
+
+    .wechat-img {
+      position: relative;
+      width: 271px;
+      height: 235px;
+      margin: 0 auto;
+    }
+
+    .clound1 {
+      position: absolute;
+      top: 90px;
+      left: -20px;
+      width: 157px;
+      height: 104px;
+      background-image: url("../img/clound.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .clound2 {
+      position: absolute;
+      top: 97px;
+      right: -18px;
+      width: 160px;
+      height: 88px;
+      background-image: url("../img/clound.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+    .fireworks {
+      position: absolute;
+      top: 16px;
+      left: 50px;
+      width: 37px;
+      height: 37px;
+      background-image: url("../img/fireworks.png");
+      background-repeat: no-repeat;
+      background-size: 100%;
+    }
+  }
+
+  /*向下翻页主按钮*/
+  .to-down-btn {
+    position: absolute;
+    // top: 90%;
+    left: 50%;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background-color: #f0f7f2;
+    -webkit-transform: translateX(-50%);
+    transform: translateX(-50%);
+    z-index: 666;
+
+    &:after {
+      content: "";
+      position: absolute;
+      top: 8px;
+      left: 10px;
+      width: 12px;
+      height: 12px;
+      border-top: 3px solid #ffb000;
+      border-right: 3px solid #ffb000;
+      -webkit-transform: rotate(136deg);
+      transform: rotate(136deg);
+    }
+  }
+}

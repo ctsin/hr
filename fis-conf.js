@@ -10,14 +10,12 @@ fis.match("*", {
   release: false
 });
 
-fis.match("/src/scss/(*.scss)", {
+fis.match("/src/less/(*.less)", {
   rExt: ".css",
   preprocessor: fis.plugin("autoprefixer", {
     browsers: ["Chrome < 29"]
   }),
-  parser: fis.plugin("node-sass", {
-    outputStyle: "expanded"
-  }),
+  parser: fis.plugin("less-2.x"),
   release: "css/$1"
 });
 
