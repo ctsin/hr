@@ -78,8 +78,8 @@ a {
           animation: driving 3s linear forwards;
 }
 .a-enlarge-fireworks {
-  -webkit-animation: enlarge-fireworks 2s ease-in-out forwards infinite;
-          animation: enlarge-fireworks 2s ease-in-out forwards infinite;
+  -webkit-animation: enlarge-fireworks 6s ease-in-out both infinite;
+          animation: enlarge-fireworks 6s ease-in-out both infinite;
 }
 .a-drop {
   -webkit-animation: drop 1.5s ease 1s forwards;
@@ -97,13 +97,9 @@ a {
   -webkit-animation: float-lr 4s 0.2s linear infinite;
           animation: float-lr 4s 0.2s linear infinite;
 }
-.a-bouncein-hat {
-  -webkit-animation: bouncein 1s ease-out backwards;
-          animation: bouncein 1s ease-out backwards;
-}
 .a-fadeinB-boy {
-  -webkit-animation: fadeinB 500ms ease-out 500ms backwards;
-          animation: fadeinB 500ms ease-out 500ms backwards;
+  -webkit-animation: fadeinB 500ms ease-in-out 500ms backwards;
+          animation: fadeinB 500ms ease-in-out 500ms backwards;
 }
 .a-fadeinT-indexTitle {
   -webkit-animation: fadeinT 200ms ease-out backwards;
@@ -344,45 +340,45 @@ a {
 @-webkit-keyframes enlarge-fireworks {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0.4);
-            transform: scale(0.4);
+    -webkit-transform: translateY(0) scale(0.4);
+            transform: translateY(0) scale(0.4);
   }
-  70% {
+  10% {
     opacity: 1;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: translateY(-100px) scale(1.2);
+            transform: translateY(-100px) scale(1.2);
   }
-  90% {
+  30% {
     opacity: 0;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: translateY(-90px) scale(1.2);
+            transform: translateY(-90px) scale(1.2);
   }
   100% {
     opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: translateY(0) scale(0);
+            transform: translateY(0) scale(0);
   }
 }
 @keyframes enlarge-fireworks {
   0% {
     opacity: 0;
-    -webkit-transform: scale(0.4);
-            transform: scale(0.4);
+    -webkit-transform: translateY(0) scale(0.4);
+            transform: translateY(0) scale(0.4);
   }
-  70% {
+  10% {
     opacity: 1;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: translateY(-100px) scale(1.2);
+            transform: translateY(-100px) scale(1.2);
   }
-  90% {
+  30% {
     opacity: 0;
-    -webkit-transform: scale(1.2);
-            transform: scale(1.2);
+    -webkit-transform: translateY(-90px) scale(1.2);
+            transform: translateY(-90px) scale(1.2);
   }
   100% {
     opacity: 0;
-    -webkit-transform: scale(0);
-            transform: scale(0);
+    -webkit-transform: translateY(0) scale(0);
+            transform: translateY(0) scale(0);
   }
 }
 /*单车行驶*/
@@ -566,27 +562,17 @@ body {
   /*薪酬福利*/
   /*招聘职位*/
   /*联系我们*/
-  /*向下翻页主按钮*/
 }
 #SchoolRecruit .home-page,
 #SchoolRecruit .group-info,
 #SchoolRecruit .industry-status,
 #SchoolRecruit .pay-welfare,
 #SchoolRecruit .recruit-job,
-#SchoolRecruit .recruit-stroke,
 #SchoolRecruit .contact-us {
-  height: 100% !important;
   background-repeat: no-repeat;
+  background-position: center top;
   background-size: cover;
-}
-#SchoolRecruit .home-page .swiper-slide,
-#SchoolRecruit .group-info .swiper-slide,
-#SchoolRecruit .industry-status .swiper-slide,
-#SchoolRecruit .pay-welfare .swiper-slide,
-#SchoolRecruit .recruit-job .swiper-slide,
-#SchoolRecruit .recruit-stroke .swiper-slide,
-#SchoolRecruit .contact-us .swiper-slide {
-  height: 100% !important;
+  background-color: #d7ebc8;
 }
 #SchoolRecruit #GroupSlide,
 #SchoolRecruit #WelfareSlide,
@@ -594,7 +580,9 @@ body {
   height: 100%;
 }
 #SchoolRecruit .home-page {
-  background-image: url("../img/bg-1.jpg");
+  background-image: url("../img/bg-index.jpg");
+  background-size: 100%;
+  background-color: #40b69d;
 }
 #SchoolRecruit .group-info {
   background-image: url("../img/bg-2.jpg");
@@ -605,11 +593,8 @@ body {
 #SchoolRecruit .pay-welfare {
   background-image: url("../img/bg-4.jpg");
 }
-#SchoolRecruit .recruit-stroke {
-  background-image: url("../img/bg-6.jpg");
-}
 #SchoolRecruit .contact-us {
-  background-image: url("../img/bg-7.jpg");
+  background-image: url("../img/bg-2.jpg");
 }
 #SchoolRecruit .icon {
   position: relative;
@@ -659,6 +644,8 @@ body {
   background-image: url("../img/title.png");
   background-repeat: no-repeat;
   background-size: 100%;
+  -webkit-filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(1px 2px #dbab21);
+          filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(1px 2px #dbab21);
 }
 #SchoolRecruit .home-page .recruit-btn {
   position: absolute;
@@ -668,13 +655,17 @@ body {
   top: 38vh;
   font-size: 20px;
   width: 131px;
-  height: 35px;
-  text-align: center;
   line-height: 35px;
-  background-color: red;
+  text-align: center;
+  background-color: #dd3529;
+  background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #e04a3f), color-stop(10%, #cc2c20));
+  background-image: -webkit-linear-gradient(#e04a3f 10%, #cc2c20);
+  background-image: linear-gradient(#e04a3f 10%, #cc2c20);
+  border: 1px solid #cc2c20;
+  border-bottom-color: #dd3529;
   -webkit-border-radius: 5px;
           border-radius: 5px;
-  color: #fff;
+  color: white;
 }
 #SchoolRecruit .home-page .hat {
   position: absolute;
@@ -688,7 +679,7 @@ body {
 }
 #SchoolRecruit .home-page .boy {
   position: absolute;
-  bottom: 60px;
+  bottom: 80px;
   left: 54vw;
   z-index: 1;
   width: 100px;
@@ -1122,6 +1113,9 @@ body {
   line-height: 20px;
   font-size: 12px;
 }
+#SchoolRecruit .recruit-job {
+  background-color: white;
+}
 #SchoolRecruit .recruit-job .job-head {
   height: 174px;
   background-image: url("../img/job-info-head.jpg");
@@ -1209,17 +1203,17 @@ body {
   background-color: #ebebeb;
 }
 #SchoolRecruit .recruit-job .position-overview {
-  height: 200px;
+  height: 160px;
   position: relative;
-  padding-bottom: 25px;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: left center;
 }
 #SchoolRecruit .recruit-job .sell-er-bg {
   background-image: url("../img/sell-bg.jpg");
 }
 #SchoolRecruit .recruit-job .summary {
-  margin-top: 30px;
+  margin-top: 10px;
   font-size: 13px;
   color: #fff;
   width: 50%;
@@ -1232,8 +1226,7 @@ body {
 }
 #SchoolRecruit .recruit-job .position-duties,
 #SchoolRecruit .recruit-job .position-requirements {
-  margin-top: 5px;
-  padding: 16px;
+  margin: 1.2em;
   background-color: #fff;
 }
 #SchoolRecruit .recruit-job .position-subtitle {
@@ -1378,35 +1371,48 @@ body {
 }
 #SchoolRecruit .contact-us .fireworks {
   position: absolute;
-  top: 16px;
-  left: 50px;
+  top: 30%;
+  left: 20%;
   width: 37px;
   height: 37px;
   background-image: url("../img/fireworks.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
-#SchoolRecruit .to-down-btn {
+/*向下翻页主按钮*/
+.swiper-button-next {
   position: absolute;
+  top: 100%;
+  right: auto;
   left: 50%;
-  width: 35px;
-  height: 35px;
+  width: 36px;
+  height: 36px;
+  margin-top: 0;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background-color: #f0f7f2;
-  -webkit-transform: translateX(-50%);
-  transform: translateX(-50%);
-  z-index: 666;
+  -webkit-transform: translate3d(-50%, -130%, 0);
+          transform: translate3d(-50%, -130%, 0);
+  background-image: none;
+  background-color: white;
+  opacity: 1;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }
-#SchoolRecruit .to-down-btn:after {
+.swiper-button-next::after {
   content: "";
   position: absolute;
-  top: 8px;
-  left: 10px;
-  width: 12px;
-  height: 12px;
-  border-top: 3px solid #ffb000;
-  border-right: 3px solid #ffb000;
-  -webkit-transform: rotate(136deg);
-  transform: rotate(136deg);
+  top: 50%;
+  left: 50%;
+  width: 40%;
+  height: 40%;
+  border-style: solid;
+  border-color: #ffcc00;
+  border-width: 0 0 2px 2px;
+  -webkit-transform: translate3d(-50%, -70%, 0) rotate(-45deg);
+          transform: translate3d(-50%, -70%, 0) rotate(-45deg);
+}
+.swiper-button-next.swiper-button-disabled {
+  opacity: 0;
+  -webkit-transition: opacity 0.3s;
+  transition: opacity 0.3s;
 }

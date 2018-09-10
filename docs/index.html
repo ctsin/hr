@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <link rel="stylesheet" href="css/index.css">
-    <title>2019人力资源校园招聘</title>
+    <title>2019中安信业校园招聘</title>
   </head>
   <body>
     <div class="swiper-container" id="SchoolRecruit">
@@ -15,7 +15,7 @@
           <div class="recruit-btn">校招职位</div>
           <div class="hat"></div>
           <div class="boy"></div>
-          <div class="girl"></div>
+          <div class="girl" style="animation-delay: .65s;"></div>
           <div class="school"></div>
         </div>
         <div class="swiper-slide group-info">
@@ -23,11 +23,7 @@
             <div class="swiper-wrapper">
               <div class="swiper-slide">
                 <div class="big-title">集团介绍</div>
-                <div class="turntable">
-                  <div class="zichan"></div>
-                  <div class="touzi"></div>
-                  <div class="yatai"></div>
-                </div>
+                <div class="turntable"></div>
                 <div class="group-introduction">成立于 2003年10月 ，中国领先的小微金融服务企业，致力于通过微贷技术服务协助银行等金融机构为小微企业主、个体商户及工薪阶层提供快速简便、免抵押、免担保的小额贷款服务。</div>
                 <div class="group-introduction">经过十四年的发展，中安信业已成长为一家多元化的金融集团公司。</div>
               </div>
@@ -83,12 +79,12 @@
                 <div class="honor-pic"></div>
                 <ul class="honor-ul">
                   <li class="honor-li">
-                    <div class="years">2017年</div>
-                    <div class="event">前程无忧2017人力资源管理杰出奖</div>
+                    <div class="years">2017-2018年</div>
+                    <div class="event">连续两年前程无忧人力资源杰出管理奖</div>
                   </li>
                   <li class="honor-li">
-                    <div class="years">2010-2016年</div>
-                    <div class="event">连续三年最佳雇主深圳30强</div>
+                    <div class="years">2010-2017年</div>
+                    <div class="event">连续四年最佳雇主深圳30强</div>
                     <div class="event">连续六年获评南方资信AAA资信等级</div>
                     <div class="event">第三届中国财经峰会“2014最佳品牌形象奖”</div>
                     <div class="event">中国金融风云榜“最值得信赖金融服务机构奖”</div>
@@ -118,8 +114,7 @@
           </div>
           <div class="status-main">
             <div class="status-subtitle">领先的管理</div>
-            <div class="status-info">
-               来自美国、德国、马来西亚、中国香港、中国台湾等多个国家的高管，<span class="focus">90%</span>的高管连续多年被评为前海高端与紧缺人才。</div>
+            <div class="status-info">来自美国、德国、马来西亚、中国香港、中国台湾等多个国家的高管，<span class="focus">90%</span>的高管连续多年被评为前海高端与紧缺人才。</div>
             <div class="status-subtitle">领先的技术</div>
             <div class="status-info">
                近五年，为市场培养<span class="focus">近千名</span>具有LBD资质的人才，风险控制率同行<span class="focus">遥遥领先。</span></div>
@@ -168,7 +163,7 @@
             <div class="big-title">销售代表</div>
             <div class="summary">
               <div class="departments icon icon-dep">招聘部门：区域分公司</div>
-              <div class="need-howmany icon icon-hownmany">招聘人数：100人</div>
+              <div class="need-howmany icon icon-hownmany">招聘人数：40人</div>
               <div class="work-place icon icon-place">工作地点：全国</div>
             </div>
           </div>
@@ -216,8 +211,9 @@
           </div>
         </div>
         <div class="swiper-slide contact-us">
-          <div class="fireworks" style="top:6%;left:15%;animation-delay:.3s;"></div>
-          <div class="fireworks" style="top:16%;left:65%;animation-delay:.6s;"></div>
+          <div class="fireworks" style="top:20%;left:15%;animation-delay: 5s; animation-timing-function: ease-in-out;"></div>
+          <div class="fireworks" style="top:26%;left:65%;animation-delay: 3s; animation-timing-function: ease-in;"></div>
+          <div class="fireworks"></div>
           <ul class="contact-ul">
             <li class="contact-li">
               <div class="contact-key icon icon-email">投递邮箱</div>
@@ -235,19 +231,18 @@
           <div class="follow-zac">
             <div class="wechat-img">
               <div class="clound1"></div>
-              <div class="clound2"></div>
-              <div class="fireworks"></div><img src="img/QR-code.png" alt="" width="100%" style="position: absolute;z-index:666">
+              <div class="clound2"></div><img src="img/QR-code.png" alt="" width="100%" style="position: absolute;z-index:666">
             </div>
           </div>
         </div>
       </div>
-      <div class="to-down-btn a-drop a-float-arrow"></div>
+      <div class="swiper-button-next"></div>
     </div>
     <script src="js/lib/jquery-3.3.1.min.js"></script>
     <script src="js/lib/swiper.jquery.min.js"></script>
     <script>
       $(function() {
-        $(".index-title").addClass("a-fadeinT-indexTitle");			
+        $(".index-title").addClass("a-fadeinT-indexTitle");
         $(".hat").addClass("a-bouncein-hat");
         $(".boy").addClass("a-fadeinB-boy");
         $(".girl").addClass("a-fadeinB-boy");
@@ -255,118 +250,80 @@
         $(".school").addClass("a-fadeinB-school");
       
         //- 主滑动块
-        var swiperSchoolRecruit = new Swiper('#SchoolRecruit', {
-          //- pagination: '.swiper-pagination-v',
-          //- paginationClickable: true,
-          direction: 'vertical',
-          initialSlide :0,
-          onSlideChangeStart:function(swiper){
-            if(swiper.activeIndex=='0') { //- 首页
-              $(".index-title").addClass("a-fadeinT-indexTitle");
-              $(".hat").addClass("a-bouncein-hat");
-              $(".boy").addClass("a-fadeinB-boy");
-              $(".girl").addClass("a-fadeinB-boy");
-              $(".grassland").addClass("a-fadein");
-              $(".school").addClass("a-fadeinB-school");
-            }
-            if(swiper.activeIndex=='1') { //- 集团信息
+        var swiperSchoolRecruit = new Swiper("#SchoolRecruit", {
+          nextButton: ".swiper-button-next",
+          direction: "vertical",
+          initialSlide: 5,
+          onImagesReady: function(swiper) {
+            //- 首页
+            $(".index-title").addClass("a-fadeinT-indexTitle");
+            $(".boy").addClass("a-fadeinB-boy");
+            $(".girl").addClass("a-fadeinB-boy");
+            $(".grassland").addClass("a-fadein");
+            $(".school").addClass("a-fadeinB-school");
+          },
+          onSlideChangeStart: function(swiper) {
+            if (swiper.activeIndex == "1") {
+              //- 集团信息
               $(".floor-base").addClass("a-fadein");
               $(".building1").addClass("a-fadeinB");
               $(".building2").addClass("a-fadeinB");
-              $(".rider ").addClass("a-driving");
+              $(".rider").addClass("a-driving");
       
               $(".zichan").addClass("a-ripple");
               $(".touzi").addClass("a-ripple");
               $(".yatai").addClass("a-ripple");
             }
-            if(swiper.activeIndex=='2') { //- 行业地位
+            if (swiper.activeIndex == "2") {
+              //- 行业地位
               $(".status-building").addClass("a-float-updown");
               $(".status-technology").addClass("a-enlarge");
               $(".status-culture").addClass("a-enlarge");
-              $(".status-manage ").addClass("a-enlarge");
+              $(".status-manage").addClass("a-enlarge");
             }
-            if(swiper.activeIndex=='3') { //- 薪酬福利
+            if (swiper.activeIndex == "3") {
+              //- 薪酬福利
               $(".human-avater").addClass("a-enlarge");
             }
-            if(swiper.activeIndex=='4') { //- 招聘岗位
+            if (swiper.activeIndex == "4") {
+              //- 招聘岗位
               $(".aircraft").addClass("a-flying");
               $(".person1").addClass("a-fadeinT-person");
               $(".person2").addClass("a-fadeinT-person");
               $(".person3").addClass("a-fadeinT-person");
             }
-            if(swiper.activeIndex=='5') { //- 校招行程			
-              $(".schedule-one").addClass("a-show0");
-              $(".schedule-two").addClass("a-show1");
-              $(".schedule-three").addClass("a-show2");
-              $(".schedule-four").addClass("a-show3");
-              $(".schedule-five").addClass("a-show4");
-              $(".schedule-six").addClass("a-show5");
-              $(".schedule-seven").addClass("a-show6");
-            }
-            if(swiper.activeIndex=='6') { //- 联系我们		
+            if (swiper.activeIndex == "5") {
+              //- 联系我们
               $(".clound1").addClass("a-float-updown");
               $(".clound2").addClass("a-float-lr");
               $(".fireworks").addClass("a-enlarge-fireworks");
             }
-          },
+          }
+        });
+      
+        $(".recruit-btn").on("click", function() {
+          swiperSchoolRecruit.slideTo(4, 1000, false);
         });
       
         //- 集团信息滑动块
-        var swiperGroupSlide = new Swiper('#GroupSlide', {
-          pagination: '.swiper-pagination-h',
-          paginationClickable: true,
-          //- loop: true,
-          //- autoplay: 3000,
-          autoplayDisableOnInteraction:false,
-          onSlideChangeStart:function(swiper){
-            if(swiper.activeIndex=='1') {
+        var swiperGroupSlide = new Swiper("#GroupSlide", {
+          pagination: ".swiper-pagination-h",
+          onSlideChangeStart: function(swiper) {
+            if (swiper.activeIndex == "1") {
               $(".three").show(500);
               $(".eight").show(1000);
               $(".ten").show(1500);
               $(".twelve").show(2000);
               $(".fourteen").show(2500);
               $(".sixteen").show(3000);
-            }					
+            }
           }
         });
       
         //- 薪酬福利滑动块
-        var swiperWelfareSlide = new Swiper('#WelfareSlide', {
-          pagination: '.swiper-pagination-h',
-          paginationClickable: true,
-          //- loop: true,
-          //- autoplay: 4000,
-          autoplayDisableOnInteraction:false,
+        var swiperWelfareSlide = new Swiper("#WelfareSlide", {
+          pagination: ".swiper-pagination-h"
         });
-      
-      
-        //- 显示职位详情
-        $(".sell-er").on('click',function(e){
-          $(".job-index").hide();
-          $("#sell-er").show();
-          e.preventDefault();
-        });
-        $(".guanxi-er").on('click',function(e){
-          $(".job-index").hide();
-          $("#guanxi-er").show();
-          e.preventDefault();
-        });
-        $(".dev-er").on('click',function(e){
-          $(".job-index").hide();
-          $("#dev-er").show();
-          e.preventDefault();
-        });
-        $(".hr-er").on('click',function(e){
-          $(".job-index").hide();
-          $("#hr-er").show();
-          e.preventDefault();
-        });			
-        //- 返回招聘岗位
-        //- $(".back-jobs").on('touchend',function(e){
-        //-   $(this).parent().parent().hide();
-        //-   $(".job-index").show();
-        //-   e.preventDefault();
-        //- });
       });
     </script>
   </body>

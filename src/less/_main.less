@@ -1,5 +1,6 @@
 // 定义变量
 @focus: rgb(255, 204, 0);
+@primary-color: #dd3529;
 
 body,
 div,
@@ -90,7 +91,7 @@ a {
 
 .a-enlarge-fireworks {
   //- 关于我们页面绽放的烟花
-  animation: enlarge-fireworks 2s ease-in-out forwards infinite;
+  animation: enlarge-fireworks 6s ease-in-out both infinite;
 }
 .a-drop {
   //- 首页从天而降的导向箭头
@@ -108,13 +109,9 @@ a {
   //- 左右来回浮动
   animation: float-lr 4s 0.2s linear infinite;
 }
-.a-bouncein-hat {
-  //- 帽子渐入
-  animation: bouncein 1s ease-out backwards;
-}
 .a-fadeinB-boy {
   //- 首页学生从底部渐入
-  animation: fadeinB 500ms ease-out 500ms backwards;
+  animation: fadeinB 500ms ease-in-out 500ms backwards;
 }
 .a-fadeinT-indexTitle {
   //- 首页标题从天而降
@@ -237,19 +234,19 @@ a {
 @keyframes enlarge-fireworks {
   0% {
     opacity: 0;
-    transform: scale(0.4);
+    transform: translateY(0) scale(0.4);
   }
-  70% {
+  10% {
     opacity: 1;
-    transform: scale(1.2);
+    transform: translateY(-100px) scale(1.2);
   }
-  90% {
+  30% {
     opacity: 0;
-    transform: scale(1.2);
+    transform: translateY(-90px) scale(1.2);
   }
   100% {
     opacity: 0;
-    transform: scale(0);
+    transform: translateY(0) scale(0);
   }
 }
 
@@ -390,15 +387,11 @@ body {
   .industry-status,
   .pay-welfare,
   .recruit-job,
-  .recruit-stroke,
   .contact-us {
-    height: 100% !important;
     background-repeat: no-repeat;
-    //background-size: 100vw 100vh;
+    background-position: center top;
     background-size: cover;
-    .swiper-slide {
-      height: 100% !important;
-    }
+    background-color: rgb(215, 235, 200);
   }
 
   #GroupSlide,
@@ -408,7 +401,9 @@ body {
   }
 
   .home-page {
-    background-image: url("../img/bg-1.jpg");
+    background-image: url("../img/bg-index.jpg");
+    background-size: 100%;
+    background-color: rgb(64, 182, 157);
   }
   .group-info {
     background-image: url("../img/bg-2.jpg");
@@ -419,11 +414,8 @@ body {
   .pay-welfare {
     background-image: url("../img/bg-4.jpg");
   }
-  .recruit-stroke {
-    background-image: url("../img/bg-6.jpg");
-  }
   .contact-us {
-    background-image: url("../img/bg-7.jpg");
+    background-image: url("../img/bg-2.jpg");
   }
 
   .icon {
@@ -470,6 +462,8 @@ body {
   /*首屏*/
   .home-page {
     .index-title {
+      @offset: 3px;
+
       position: absolute;
       top: 8vh;
       left: 15vw;
@@ -478,6 +472,7 @@ body {
       background-image: url("../img/title.png");
       background-repeat: no-repeat;
       background-size: 100%;
+      filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(1px 2px #dbab21);
     }
     .recruit-btn {
       position: absolute;
@@ -486,12 +481,17 @@ body {
       top: 38vh;
       font-size: 20px;
       width: 131px;
-      height: 35px;
-      text-align: center;
       line-height: 35px;
-      background-color: red;
+      text-align: center;
+      background-color: @primary-color;
+      background-image: linear-gradient(
+        lighten(@primary-color, 5%) 10%,
+        darken(@primary-color, 5%)
+      );
+      border: 1px solid darken(@primary-color, 5%);
+      border-bottom-color: @primary-color;
       border-radius: 5px;
-      color: #fff;
+      color: white;
     }
     .hat {
       position: absolute;
@@ -505,7 +505,7 @@ body {
     }
     .boy {
       position: absolute;
-      bottom: 60px;
+      bottom: 80px;
       left: 54vw;
       z-index: 1;
       width: 100px;
@@ -957,6 +957,8 @@ body {
 
   /*招聘职位*/
   .recruit-job {
+    background-color: white;
+
     .job-head {
       height: 174px;
       background-image: url("../img/job-info-head.jpg");
@@ -1037,18 +1039,18 @@ body {
       background-color: #ebebeb;
     }
     .position-overview {
-      height: 200px;
+      height: 160px;
       position: relative;
-      padding-bottom: 25px;
       background-repeat: no-repeat;
       background-size: cover;
+      background-position: left center;
     }
 
     .sell-er-bg {
       background-image: url("../img/sell-bg.jpg");
     }
     .summary {
-      margin-top: 30px;
+      margin-top: 10px;
       font-size: 13px;
       color: #fff;
       width: 50%;
@@ -1061,8 +1063,7 @@ body {
     }
     .position-duties,
     .position-requirements {
-      margin-top: 5px;
-      padding: 16px;
+      margin: 1.2em;
       background-color: #fff;
     }
     .position-subtitle {
@@ -1217,8 +1218,8 @@ body {
     }
     .fireworks {
       position: absolute;
-      top: 16px;
-      left: 50px;
+      top: 30%;
+      left: 20%;
       width: 37px;
       height: 37px;
       background-image: url("../img/fireworks.png");
@@ -1241,6 +1242,8 @@ body {
   transform: translate3d(-50%, -130%, 0);
   background-image: none;
   background-color: white;
+  opacity: 1;
+  transition: opacity 0.3s;
 
   &::after {
     content: "";
@@ -1253,5 +1256,10 @@ body {
     border-color: @focus;
     border-width: 0 0 2px 2px;
     transform: translate3d(-50%, -70%, 0) rotate(-45deg);
+  }
+
+  &.swiper-button-disabled {
+    opacity: 0;
+    transition: opacity 0.3s;
   }
 }
