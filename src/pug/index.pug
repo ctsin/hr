@@ -205,7 +205,7 @@ block main
             .clound2
             .fireworks
             img(src="../img/QR-code.png", alt="", width="100%",style="position: absolute;z-index:666")
-    .to-down-btn.a-drop.a-float-arrow
+    .swiper-button-next
 
 block scripts
   script.
@@ -219,10 +219,9 @@ block scripts
 
       //- 主滑动块
       var swiperSchoolRecruit = new Swiper('#SchoolRecruit', {
-        //- pagination: '.swiper-pagination-v',
-        //- paginationClickable: true,
+        nextButton: '.swiper-button-next',
         direction: 'vertical',
-        initialSlide :0,
+        initialSlide: 0,
         onSlideChangeStart:function(swiper){
           if(swiper.activeIndex=='0') { //- 首页
             $(".index-title").addClass("a-fadeinT-indexTitle");
@@ -257,15 +256,6 @@ block scripts
             $(".person2").addClass("a-fadeinT-person");
             $(".person3").addClass("a-fadeinT-person");
           }
-          if(swiper.activeIndex=='5') { //- 校招行程			
-            $(".schedule-one").addClass("a-show0");
-            $(".schedule-two").addClass("a-show1");
-            $(".schedule-three").addClass("a-show2");
-            $(".schedule-four").addClass("a-show3");
-            $(".schedule-five").addClass("a-show4");
-            $(".schedule-six").addClass("a-show5");
-            $(".schedule-seven").addClass("a-show6");
-          }
           if(swiper.activeIndex=='6') { //- 联系我们		
             $(".clound1").addClass("a-float-updown");
             $(".clound2").addClass("a-float-lr");
@@ -274,13 +264,13 @@ block scripts
         },
       });
 
+      $('.recruit-btn').on('click', function(){
+        swiperSchoolRecruit.slideTo(4, 1000, false);
+      })
+
       //- 集团信息滑动块
       var swiperGroupSlide = new Swiper('#GroupSlide', {
         pagination: '.swiper-pagination-h',
-        paginationClickable: true,
-        //- loop: true,
-        //- autoplay: 3000,
-        autoplayDisableOnInteraction:false,
         onSlideChangeStart:function(swiper){
           if(swiper.activeIndex=='1') {
             $(".three").show(500);
@@ -296,10 +286,6 @@ block scripts
       //- 薪酬福利滑动块
       var swiperWelfareSlide = new Swiper('#WelfareSlide', {
         pagination: '.swiper-pagination-h',
-        paginationClickable: true,
-        //- loop: true,
-        //- autoplay: 4000,
-        autoplayDisableOnInteraction:false,
       });
 
 
@@ -309,25 +295,4 @@ block scripts
         $("#sell-er").show();
         e.preventDefault();
       });
-      $(".guanxi-er").on('click',function(e){
-        $(".job-index").hide();
-        $("#guanxi-er").show();
-        e.preventDefault();
-      });
-      $(".dev-er").on('click',function(e){
-        $(".job-index").hide();
-        $("#dev-er").show();
-        e.preventDefault();
-      });
-      $(".hr-er").on('click',function(e){
-        $(".job-index").hide();
-        $("#hr-er").show();
-        e.preventDefault();
-      });			
-      //- 返回招聘岗位
-      //- $(".back-jobs").on('touchend',function(e){
-      //-   $(this).parent().parent().hide();
-      //-   $(".job-index").show();
-      //-   e.preventDefault();
-      //- });
     });

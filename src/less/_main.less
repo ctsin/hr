@@ -1,3 +1,6 @@
+// 定义变量
+@focus: rgb(255, 204, 0);
+
 body,
 div,
 dl,
@@ -895,7 +898,7 @@ body {
     .focus {
       font-size: 13px;
       font-weight: bold;
-      color: #ffcc00;
+      color: @focus;
     }
   }
 
@@ -1223,31 +1226,32 @@ body {
       background-size: 100%;
     }
   }
+}
 
-  /*向下翻页主按钮*/
-  .to-down-btn {
+/*向下翻页主按钮*/
+.swiper-button-next {
+  position: absolute;
+  top: 100%;
+  right: auto;
+  left: 50%;
+  width: 36px;
+  height: 36px;
+  margin-top: 0;
+  border-radius: 50%;
+  transform: translate3d(-50%, -130%, 0);
+  background-image: none;
+  background-color: white;
+
+  &::after {
+    content: "";
     position: absolute;
-    // top: 90%;
+    top: 50%;
     left: 50%;
-    width: 35px;
-    height: 35px;
-    border-radius: 50%;
-    background-color: #f0f7f2;
-    -webkit-transform: translateX(-50%);
-    transform: translateX(-50%);
-    z-index: 666;
-
-    &:after {
-      content: "";
-      position: absolute;
-      top: 8px;
-      left: 10px;
-      width: 12px;
-      height: 12px;
-      border-top: 3px solid #ffb000;
-      border-right: 3px solid #ffb000;
-      -webkit-transform: rotate(136deg);
-      transform: rotate(136deg);
-    }
+    width: 40%;
+    height: 40%;
+    border-style: solid;
+    border-color: @focus;
+    border-width: 0 0 2px 2px;
+    transform: translate3d(-50%, -70%, 0) rotate(-45deg);
   }
 }
