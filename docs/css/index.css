@@ -1863,6 +1863,7 @@ body {
   transition: opacity 0.3s;
 }
 .swiper-button-next > .inner {
+  display: none;
   position: absolute;
   top: 50%;
   left: 50%;
@@ -1872,8 +1873,6 @@ body {
   color: #ffcc00;
   border-color: transparent transparent currentColor currentColor;
   border-width: 2px;
-  -webkit-animation: sliderDownFlash 1.5s infinite;
-          animation: sliderDownFlash 1.5s infinite;
   -webkit-transform: translate3d(-50%, 0, 0) rotate(-45deg);
           transform: translate3d(-50%, 0, 0) rotate(-45deg);
 }
@@ -1882,11 +1881,20 @@ body {
 }
 .swiper-button-next > .inner:nth-child(2) {
   top: 16%;
-  -webkit-animation-delay: 0.15s;
-          animation-delay: 0.15s;
 }
 .swiper-button-next > .inner:nth-child(3) {
   top: 32%;
+}
+.swiper-button-next > .inner.animate {
+  display: block;
+  -webkit-animation: sliderDownFlash 1.5s infinite;
+          animation: sliderDownFlash 1.5s infinite;
+}
+.swiper-button-next > .inner.animate:nth-child(2) {
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
+}
+.swiper-button-next > .inner.animate:nth-child(3) {
   -webkit-animation-delay: 0.3s;
           animation-delay: 0.3s;
 }

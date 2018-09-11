@@ -10,6 +10,7 @@ $(() => {
       $(".girl").addClass("a-fadeinB-boy");
       $(".grassland").addClass("a-fadein");
       $(".school").addClass("a-fadeinB-school");
+      $(".swiper-button-next .inner").addClass("animate");
     },
     onSlideChangeStart: function(swiper) {
       if (swiper.activeIndex == "1") {
