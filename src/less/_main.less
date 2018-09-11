@@ -397,27 +397,75 @@ body {
     }
   }
 
-  .arrow-btn {
-    position: absolute;
-    width: 14px;
-    height: 14px;
-    border-top: 2px solid #fff;
-    border-left: 2px solid #fff;
-  }
-  .arrow-toLeft {
-    transform: rotate(-45deg);
-  }
-  .arrow-toRight {
-    transform: rotate(135deg);
+  @arrow-falsh-start: 0.1;
+  @arrow-falsh-end: 0.3;
+
+  @keyframes arrow-falsh {
+    from {
+      opacity: @arrow-falsh-start;
+    }
+
+    5% {
+      opacity: @arrow-falsh-end;
+    }
+
+    10% {
+      opacity: @arrow-falsh-start;
+    }
+
+    15% {
+      opacity: @arrow-falsh-end;
+    }
+
+    20% {
+      opacity: @arrow-falsh-start;
+    }
+
+    25% {
+      opacity: @arrow-falsh-end;
+    }
+
+    to {
+      opacity: 0;
+    }
   }
 
-  .flip-page-left {
+  .arrow-indicator {
+    @size: 1.5em;
+
+    position: absolute;
     top: 40%;
-    left: 6%;
-  }
-  .flip-page-right {
-    top: 40%;
-    right: 6%;
+    left: 0;
+    width: 100%;
+    color: white;
+
+    &::before,
+    &::after {
+      content: "";
+      position: absolute;
+      top: -(@size / 2);
+      width: @size;
+      height: @size;
+      border-color: currentColor;
+      border-style: solid;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+      left: @size;
+      border-width: 0 0 2px 2px;
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+      right: @size;
+      border-width: 0 2px 2px 0;
+    }
+
+    &.flash {
+      transform-origin: center;
+      animation: arrow-falsh 2s forwards infinite;
+    }
   }
 
   .big-title {
@@ -690,11 +738,16 @@ body {
 
     .key-node {
       position: absolute;
-      display: none;
       width: 8px;
       height: 8px;
       border-radius: 50%;
       background-color: #fff;
+      opacity: 0;
+      transition: opacity 0.8s;
+
+      &.in {
+        opacity: 1;
+      }
     }
     .three {
       bottom: -3px;
@@ -1277,5 +1330,27 @@ body {
   &.swiper-button-disabled {
     opacity: 0;
     transition: opacity 0.3s;
+  }
+}
+
+.swiper-button-back {
+  @size: 14px;
+
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: @size;
+  height: @size;
+  color: white;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: @size;
+    height: @size;
+    border-width: 0 0 2px 2px;
+    border-color: currentColor;
+    border-style: solid;
+    transform: rotate(45deg);
   }
 }

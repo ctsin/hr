@@ -582,28 +582,86 @@ body {
   background-repeat: no-repeat;
   background-size: 40px 100px;
 }
-#SchoolRecruit .arrow-btn {
-  position: absolute;
-  width: 14px;
-  height: 14px;
-  border-top: 2px solid #fff;
-  border-left: 2px solid #fff;
+@-webkit-keyframes arrow-falsh {
+  from {
+    opacity: 0.1;
+  }
+  5% {
+    opacity: 0.3;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0;
+  }
 }
-#SchoolRecruit .arrow-toLeft {
+@keyframes arrow-falsh {
+  from {
+    opacity: 0.1;
+  }
+  5% {
+    opacity: 0.3;
+  }
+  10% {
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 0.3;
+  }
+  20% {
+    opacity: 0.1;
+  }
+  25% {
+    opacity: 0.3;
+  }
+  to {
+    opacity: 0;
+  }
+}
+#SchoolRecruit .arrow-indicator {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  color: white;
+}
+#SchoolRecruit .arrow-indicator::before,
+#SchoolRecruit .arrow-indicator::after {
+  content: "";
+  position: absolute;
+  top: -0.75em;
+  width: 1.5em;
+  height: 1.5em;
+  border-color: currentColor;
+  border-style: solid;
+}
+#SchoolRecruit .arrow-indicator::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: 1.5em;
+  border-width: 0 0 2px 2px;
+}
+#SchoolRecruit .arrow-indicator::after {
   -webkit-transform: rotate(-45deg);
           transform: rotate(-45deg);
+  right: 1.5em;
+  border-width: 0 2px 2px 0;
 }
-#SchoolRecruit .arrow-toRight {
-  -webkit-transform: rotate(135deg);
-          transform: rotate(135deg);
-}
-#SchoolRecruit .flip-page-left {
-  top: 40%;
-  left: 6%;
-}
-#SchoolRecruit .flip-page-right {
-  top: 40%;
-  right: 6%;
+#SchoolRecruit .arrow-indicator.flash {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: arrow-falsh 2s forwards infinite;
+          animation: arrow-falsh 2s forwards infinite;
 }
 #SchoolRecruit .big-title {
   padding-top: 20px;
@@ -868,12 +926,17 @@ body {
 }
 #SchoolRecruit .group-info .key-node {
   position: absolute;
-  display: none;
   width: 8px;
   height: 8px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
   background-color: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.8s;
+  transition: opacity 0.8s;
+}
+#SchoolRecruit .group-info .key-node.in {
+  opacity: 1;
 }
 #SchoolRecruit .group-info .three {
   bottom: -3px;
@@ -1445,4 +1508,23 @@ body {
   opacity: 0;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
+}
+.swiper-button-back {
+  position: absolute;
+  top: 1em;
+  left: 1em;
+  width: 14px;
+  height: 14px;
+  color: white;
+}
+.swiper-button-back::after {
+  content: "";
+  position: absolute;
+  width: 14px;
+  height: 14px;
+  border-width: 0 0 2px 2px;
+  border-color: currentColor;
+  border-style: solid;
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
 }

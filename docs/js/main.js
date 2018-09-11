@@ -8,6 +8,7 @@ $(function () {
   var swiperSchoolRecruit = new Swiper("#SchoolRecruit", {
     nextButton: ".swiper-button-next",
     direction: "vertical",
+    // initialSlide: 3,
     onImagesReady: function onImagesReady() {
       $(".boy").addClass("a-fadeinB-boy");
       $(".girl").addClass("a-fadeinB-boy");
@@ -15,7 +16,7 @@ $(function () {
       $(".school").addClass("a-fadeinB-school");
       $(".swiper-button-next .inner").addClass("animate");
     },
-    onSlideChangeStart: function onSlideChangeStart(swiper) {
+    onSlideChangeEnd: function onSlideChangeEnd(swiper) {
       if (swiper.activeIndex == "1") {
         //- 集团信息
         $(".floor-base").addClass("a-fadein");
@@ -51,24 +52,32 @@ $(function () {
         $(".clound2").addClass("a-float-lr");
         $(".fireworks").addClass("a-enlarge-fireworks");
       }
+      if (swiper.activeIndex == "1" || swiper.activeIndex == "3") {
+        $(".arrow-indicator").addClass("flash");
+      }
     }
   });
 
   $(".recruit-btn").on("click", function () {
-    swiperSchoolRecruit.slideTo(4, 1000, false);
+    swiperSchoolRecruit.slideTo(4, 0, false);
+  });
+
+  $(".swiper-button-back").on("click", function () {
+    swiperSchoolRecruit.slideTo(0, 0, false);
   });
 
   //- 集团信息滑动块
   new Swiper("#GroupSlide", {
     pagination: ".swiper-pagination-h",
-    onSlideChangeStart: function onSlideChangeStart(swiper) {
+    onSlideChangeEnd: function onSlideChangeEnd(swiper) {
       if (swiper.activeIndex == "1") {
-        $(".three").show(500);
-        $(".eight").show(1000);
-        $(".ten").show(1500);
-        $(".twelve").show(2000);
-        $(".fourteen").show(2500);
-        $(".sixteen").show(3000);
+        $(".key-node").each(function (index) {
+          var _this = this;
+
+          setTimeout(function () {
+            $(_this).addClass("in");
+          }, 400 * index);
+        });
       }
     }
   });
