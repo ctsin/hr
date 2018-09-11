@@ -45,45 +45,6 @@ a {
 }
 
 /***********************动画定义*************************/
-
-.a-show0 {
-  //- 校招行程页面 学校1
-  animation: show 100ms linear 0.5s forwards;
-}
-.a-show1 {
-  //- 校招行程页面 学校2
-  animation: show 100ms linear 1s forwards;
-}
-.a-show2 {
-  //- 校招行程页面 学校3
-  animation: show 100ms linear 1.5s forwards;
-}
-.a-show3 {
-  //- 校招行程页面 学校4
-  animation: show 100ms linear 2s forwards;
-}
-.a-show4 {
-  //- 校招行程页面 学校5
-  animation: show 100ms linear 2.5s forwards;
-}
-.a-show5 {
-  //- 校招行程页面 学校6
-  animation: show 100ms linear 3s forwards;
-}
-.a-show6 {
-  //- 校招行程页面 学校7
-  animation: show 100ms linear 3.5s forwards;
-}
-
-.a-fadeinT-person {
-  //- 校招岗位页面从天而降的小人儿
-  animation: fadeinT 900ms ease-in-out backwards;
-}
-.a-flying {
-  //- 妈呀飞机
-  animation: flying 1s linear 1s forwards;
-}
-
 .a-driving {
   //- 行走的单车
   animation: driving 3s linear forwards;
@@ -115,7 +76,7 @@ a {
 }
 .a-fadeinT-indexTitle {
   //- 首页标题从天而降
-  animation: fadeinT 200ms ease-out backwards;
+  animation: fadeinT 2s ease-in-out infinite;
 }
 .a-fadeinB-school {
   //- 首页学校草地从底部入场
@@ -188,12 +149,19 @@ a {
 /*从上淡入*/
 @keyframes fadeinT {
   0% {
-    opacity: 0;
-    transform: translateY(-100px);
+    filter: drop-shadow(2px 1px #21c9c3) drop-shadow(-1px -2px #dbab21);
   }
+
+  5% {
+    filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(3px 1px #dbab21);
+  }
+
+  95% {
+    filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(3px 1px #dbab21);
+  }
+
   100% {
-    opacity: 1;
-    transform: translateY(0);
+    filter: drop-shadow(2px 1px #21c9c3) drop-shadow(-1px -2px #dbab21);
   }
 }
 
@@ -462,18 +430,17 @@ body {
   /*首屏*/
   .home-page {
     .index-title {
-      @offset: 3px;
-
       position: absolute;
       top: 8vh;
-      left: 15vw;
+      left: 50%;
       width: 286px;
       height: 179px;
       background-image: url("../img/title.png");
       background-repeat: no-repeat;
       background-size: 100%;
-      filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(1px 2px #dbab21);
+      transform: translateX(-50%);
     }
+
     .recruit-btn {
       position: absolute;
       transform: translateX(-50%);
@@ -788,12 +755,20 @@ body {
     color: #fff;
     .status-head {
       position: relative;
-      margin: 20px auto;
+      margin: 20px 0;
       width: 350px;
       height: 190px;
+      left: 50%;
+      transform: translateX(-50%) scale(0.8);
       background-image: url("../img/status-head.png");
       background-repeat: no-repeat;
       background-size: 100%;
+    }
+
+    @media (min-width: 360px) {
+      .status-head {
+        transform: translateX(-50%) scale(1);
+      }
     }
 
     .status-building {
@@ -1229,33 +1204,63 @@ body {
   }
 }
 
+@keyframes sliderDownFlash {
+  0% {
+    opacity: 0;
+  }
+
+  30% {
+    opacity: 1;
+  }
+
+  60% {
+    opacity: 0;
+  }
+
+  100% {
+    opacity: 0;
+  }
+}
+
 /*向下翻页主按钮*/
 .swiper-button-next {
+  @size: 12px;
+  @offset: 20%;
+
   position: absolute;
   top: 100%;
   right: auto;
   left: 50%;
-  width: 36px;
-  height: 36px;
-  margin-top: 0;
-  border-radius: 50%;
-  transform: translate3d(-50%, -130%, 0);
   background-image: none;
-  background-color: white;
+  background-color: transparent;
+  transform: translate3d(-50%, -110%, 0);
   opacity: 1;
   transition: opacity 0.3s;
 
-  &::after {
-    content: "";
+  & > .inner {
     position: absolute;
     top: 50%;
     left: 50%;
-    width: 40%;
-    height: 40%;
+    width: @size;
+    height: @size;
     border-style: solid;
-    border-color: @focus;
-    border-width: 0 0 2px 2px;
-    transform: translate3d(-50%, -70%, 0) rotate(-45deg);
+    border-color: transparent transparent @focus @focus;
+    border-width: 2px;
+
+    &:nth-child(1) {
+      transform: translate3d(-50%, 0, 0) rotate(-45deg);
+      animation: sliderDownFlash 1.5s infinite;
+    }
+
+    &:nth-child(2) {
+      transform: translate3d(-50%, @offset * 2, 0) rotate(-45deg);
+      animation: sliderDownFlash 1.5s infinite 0.1s;
+    }
+
+    &:nth-child(3) {
+      transform: translate3d(-50%, @offset * 4, 0) rotate(-45deg);
+      animation: sliderDownFlash 1.5s infinite 0.2s;
+    }
   }
 
   &.swiper-button-disabled {

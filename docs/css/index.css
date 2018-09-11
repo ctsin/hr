@@ -495,42 +495,6 @@ a {
   outline: 0;
 }
 /***********************动画定义*************************/
-.a-show0 {
-  -webkit-animation: show 100ms linear 0.5s forwards;
-          animation: show 100ms linear 0.5s forwards;
-}
-.a-show1 {
-  -webkit-animation: show 100ms linear 1s forwards;
-          animation: show 100ms linear 1s forwards;
-}
-.a-show2 {
-  -webkit-animation: show 100ms linear 1.5s forwards;
-          animation: show 100ms linear 1.5s forwards;
-}
-.a-show3 {
-  -webkit-animation: show 100ms linear 2s forwards;
-          animation: show 100ms linear 2s forwards;
-}
-.a-show4 {
-  -webkit-animation: show 100ms linear 2.5s forwards;
-          animation: show 100ms linear 2.5s forwards;
-}
-.a-show5 {
-  -webkit-animation: show 100ms linear 3s forwards;
-          animation: show 100ms linear 3s forwards;
-}
-.a-show6 {
-  -webkit-animation: show 100ms linear 3.5s forwards;
-          animation: show 100ms linear 3.5s forwards;
-}
-.a-fadeinT-person {
-  -webkit-animation: fadeinT 900ms ease-in-out backwards;
-          animation: fadeinT 900ms ease-in-out backwards;
-}
-.a-flying {
-  -webkit-animation: flying 1s linear 1s forwards;
-          animation: flying 1s linear 1s forwards;
-}
 .a-driving {
   -webkit-animation: driving 3s linear forwards;
           animation: driving 3s linear forwards;
@@ -560,8 +524,8 @@ a {
           animation: fadeinB 500ms ease-in-out 500ms backwards;
 }
 .a-fadeinT-indexTitle {
-  -webkit-animation: fadeinT 200ms ease-out backwards;
-          animation: fadeinT 200ms ease-out backwards;
+  -webkit-animation: fadeinT 2s ease-in-out infinite;
+          animation: fadeinT 2s ease-in-out infinite;
 }
 .a-fadeinB-school {
   -webkit-animation: fadeinB 500ms ease-out backwards;
@@ -698,26 +662,38 @@ a {
 /*从上淡入*/
 @-webkit-keyframes fadeinT {
   0% {
-    opacity: 0;
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
+    -webkit-filter: drop-shadow(2px 1px #21c9c3) drop-shadow(-1px -2px #dbab21);
+            filter: drop-shadow(2px 1px #21c9c3) drop-shadow(-1px -2px #dbab21);
+  }
+  5% {
+    -webkit-filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(3px 1px #dbab21);
+            filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(3px 1px #dbab21);
+  }
+  95% {
+    -webkit-filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(3px 1px #dbab21);
+            filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(3px 1px #dbab21);
   }
   100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-filter: drop-shadow(2px 1px #21c9c3) drop-shadow(-1px -2px #dbab21);
+            filter: drop-shadow(2px 1px #21c9c3) drop-shadow(-1px -2px #dbab21);
   }
 }
 @keyframes fadeinT {
   0% {
-    opacity: 0;
-    -webkit-transform: translateY(-100px);
-            transform: translateY(-100px);
+    -webkit-filter: drop-shadow(2px 1px #21c9c3) drop-shadow(-1px -2px #dbab21);
+            filter: drop-shadow(2px 1px #21c9c3) drop-shadow(-1px -2px #dbab21);
+  }
+  5% {
+    -webkit-filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(3px 1px #dbab21);
+            filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(3px 1px #dbab21);
+  }
+  95% {
+    -webkit-filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(3px 1px #dbab21);
+            filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(3px 1px #dbab21);
   }
   100% {
-    opacity: 1;
-    -webkit-transform: translateY(0);
-            transform: translateY(0);
+    -webkit-filter: drop-shadow(2px 1px #21c9c3) drop-shadow(-1px -2px #dbab21);
+            filter: drop-shadow(2px 1px #21c9c3) drop-shadow(-1px -2px #dbab21);
   }
 }
 /* 空降 */
@@ -1096,14 +1072,14 @@ body {
 #SchoolRecruit .home-page .index-title {
   position: absolute;
   top: 8vh;
-  left: 15vw;
+  left: 50%;
   width: 286px;
   height: 179px;
   background-image: url("../img/title.png");
   background-repeat: no-repeat;
   background-size: 100%;
-  -webkit-filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(1px 2px #dbab21);
-          filter: drop-shadow(-4px -1px #21c9c3) drop-shadow(1px 2px #dbab21);
+  -webkit-transform: translateX(-50%);
+          transform: translateX(-50%);
 }
 #SchoolRecruit .home-page .recruit-btn {
   position: absolute;
@@ -1412,12 +1388,21 @@ body {
 }
 #SchoolRecruit .industry-status .status-head {
   position: relative;
-  margin: 20px auto;
+  margin: 20px 0;
   width: 350px;
   height: 190px;
+  left: 50%;
+  -webkit-transform: translateX(-50%) scale(0.8);
+          transform: translateX(-50%) scale(0.8);
   background-image: url("../img/status-head.png");
   background-repeat: no-repeat;
   background-size: 100%;
+}
+@media (min-width: 360px) {
+  #SchoolRecruit .industry-status .status-head {
+    -webkit-transform: translateX(-50%) scale(1);
+            transform: translateX(-50%) scale(1);
+  }
 }
 #SchoolRecruit .industry-status .status-building {
   position: absolute;
@@ -1837,37 +1822,75 @@ body {
   background-repeat: no-repeat;
   background-size: 100%;
 }
+@-webkit-keyframes sliderDownFlash {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes sliderDownFlash {
+  0% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  60% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 0;
+  }
+}
 /*向下翻页主按钮*/
 .swiper-button-next {
   position: absolute;
   top: 100%;
   right: auto;
   left: 50%;
-  width: 36px;
-  height: 36px;
-  margin-top: 0;
-  -webkit-border-radius: 50%;
-          border-radius: 50%;
-  -webkit-transform: translate3d(-50%, -130%, 0);
-          transform: translate3d(-50%, -130%, 0);
   background-image: none;
-  background-color: white;
+  background-color: transparent;
+  -webkit-transform: translate3d(-50%, -110%, 0);
+          transform: translate3d(-50%, -110%, 0);
   opacity: 1;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
 }
-.swiper-button-next::after {
-  content: "";
+.swiper-button-next > .inner {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 40%;
-  height: 40%;
+  width: 12px;
+  height: 12px;
   border-style: solid;
-  border-color: #ffcc00;
-  border-width: 0 0 2px 2px;
-  -webkit-transform: translate3d(-50%, -70%, 0) rotate(-45deg);
-          transform: translate3d(-50%, -70%, 0) rotate(-45deg);
+  border-color: transparent transparent #ffcc00 #ffcc00;
+  border-width: 2px;
+}
+.swiper-button-next > .inner:nth-child(1) {
+  -webkit-transform: translate3d(-50%, 0, 0) rotate(-45deg);
+          transform: translate3d(-50%, 0, 0) rotate(-45deg);
+  -webkit-animation: sliderDownFlash 1.5s infinite;
+          animation: sliderDownFlash 1.5s infinite;
+}
+.swiper-button-next > .inner:nth-child(2) {
+  -webkit-transform: translate3d(-50%, 40%, 0) rotate(-45deg);
+          transform: translate3d(-50%, 40%, 0) rotate(-45deg);
+  -webkit-animation: sliderDownFlash 1.5s infinite 0.1s;
+          animation: sliderDownFlash 1.5s infinite 0.1s;
+}
+.swiper-button-next > .inner:nth-child(3) {
+  -webkit-transform: translate3d(-50%, 80%, 0) rotate(-45deg);
+          transform: translate3d(-50%, 80%, 0) rotate(-45deg);
+  -webkit-animation: sliderDownFlash 1.5s infinite 0.2s;
+          animation: sliderDownFlash 1.5s infinite 0.2s;
 }
 .swiper-button-next.swiper-button-disabled {
   opacity: 0;
