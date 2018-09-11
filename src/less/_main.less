@@ -1221,7 +1221,7 @@ body {
 
 /*向下翻页主按钮*/
 .swiper-button-next {
-  @size: 10px;
+  @size: 12px;
   @offset: 8%;
 
   position: absolute;
@@ -1241,7 +1241,7 @@ body {
     width: @size;
     height: @size;
     border-style: solid;
-    color: @primary-color;
+    color: @focus;
     border-color: transparent transparent currentColor currentColor;
     border-width: 2px;
     animation: sliderDownFlash 1.5s infinite;
@@ -1253,12 +1253,12 @@ body {
 
     &:nth-child(2) {
       top: @offset * 2;
-      animation-delay: 0.1s;
+      animation-delay: 0.15s;
     }
 
     &:nth-child(3) {
       top: @offset * 4;
-      animation-delay: 0.2s;
+      animation-delay: 0.3s;
     }
   }
 

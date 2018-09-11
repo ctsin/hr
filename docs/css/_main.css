@@ -1408,10 +1408,10 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 10px;
-  height: 10px;
+  width: 12px;
+  height: 12px;
   border-style: solid;
-  color: #dd3529;
+  color: #ffcc00;
   border-color: transparent transparent currentColor currentColor;
   border-width: 2px;
   -webkit-animation: sliderDownFlash 1.5s infinite;
@@ -1424,13 +1424,13 @@ body {
 }
 .swiper-button-next > .inner:nth-child(2) {
   top: 16%;
-  -webkit-animation-delay: 0.1s;
-          animation-delay: 0.1s;
+  -webkit-animation-delay: 0.15s;
+          animation-delay: 0.15s;
 }
 .swiper-button-next > .inner:nth-child(3) {
   top: 32%;
-  -webkit-animation-delay: 0.2s;
-          animation-delay: 0.2s;
+  -webkit-animation-delay: 0.3s;
+          animation-delay: 0.3s;
 }
 .swiper-button-next.swiper-button-disabled {
   opacity: 0;
