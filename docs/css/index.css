@@ -1087,6 +1087,7 @@ body {
   top: 38vh;
   font-size: 20px;
   text-align: center;
+  line-height: 1;
   padding: 0.4em 1.5em;
   background-color: #dd3529;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #e04a3f), color-stop(10%, #cc2c20));
