@@ -434,11 +434,8 @@ body {
       top: 8vh;
       left: 50%;
       width: 286px;
-      height: 179px;
-      background-image: url("../img/title.png");
-      background-repeat: no-repeat;
-      background-size: 100%;
       transform: translateX(-50%);
+      filter: drop-shadow(-2px -1px #21c9c3) drop-shadow(1px 2px #dbab21);
     }
 
     .recruit-btn {
@@ -447,9 +444,8 @@ body {
       left: 50%;
       top: 38vh;
       font-size: 20px;
-      width: 131px;
-      line-height: 35px;
       text-align: center;
+      padding: 0.4em 1.5em;
       background-color: @primary-color;
       background-image: linear-gradient(
         lighten(@primary-color, 5%) 10%,
@@ -459,6 +455,7 @@ body {
       border-bottom-color: @primary-color;
       border-radius: 5px;
       color: white;
+      z-index: 999;
     }
     .hat {
       position: absolute;
@@ -1224,8 +1221,8 @@ body {
 
 /*向下翻页主按钮*/
 .swiper-button-next {
-  @size: 12px;
-  @offset: 20%;
+  @size: 10px;
+  @offset: 8%;
 
   position: absolute;
   top: 100%;
@@ -1233,7 +1230,7 @@ body {
   left: 50%;
   background-image: none;
   background-color: transparent;
-  transform: translate3d(-50%, -110%, 0);
+  transform: translate3d(-50%, -80%, 0);
   opacity: 1;
   transition: opacity 0.3s;
 
@@ -1244,22 +1241,24 @@ body {
     width: @size;
     height: @size;
     border-style: solid;
-    border-color: transparent transparent @focus @focus;
+    color: @primary-color;
+    border-color: transparent transparent currentColor currentColor;
     border-width: 2px;
+    animation: sliderDownFlash 1.5s infinite;
+    transform: translate3d(-50%, 0, 0) rotate(-45deg);
 
     &:nth-child(1) {
-      transform: translate3d(-50%, 0, 0) rotate(-45deg);
-      animation: sliderDownFlash 1.5s infinite;
+      top: 0;
     }
 
     &:nth-child(2) {
-      transform: translate3d(-50%, @offset * 2, 0) rotate(-45deg);
-      animation: sliderDownFlash 1.5s infinite 0.1s;
+      top: @offset * 2;
+      animation-delay: 0.1s;
     }
 
     &:nth-child(3) {
-      transform: translate3d(-50%, @offset * 4, 0) rotate(-45deg);
-      animation: sliderDownFlash 1.5s infinite 0.2s;
+      top: @offset * 4;
+      animation-delay: 0.2s;
     }
   }
 

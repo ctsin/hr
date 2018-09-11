@@ -25,7 +25,8 @@
       "jquery": true
     },
     "globals": {
-      "fis": true
+      "fis": true,
+      "Swiper": true
     }
   },
   "author": "ZAC FRONTEND TEAM",

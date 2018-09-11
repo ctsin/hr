@@ -616,12 +616,10 @@ body {
   top: 8vh;
   left: 50%;
   width: 286px;
-  height: 179px;
-  background-image: url("../img/title.png");
-  background-repeat: no-repeat;
-  background-size: 100%;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
+  -webkit-filter: drop-shadow(-2px -1px #21c9c3) drop-shadow(1px 2px #dbab21);
+          filter: drop-shadow(-2px -1px #21c9c3) drop-shadow(1px 2px #dbab21);
 }
 #SchoolRecruit .home-page .recruit-btn {
   position: absolute;
@@ -630,9 +628,8 @@ body {
   left: 50%;
   top: 38vh;
   font-size: 20px;
-  width: 131px;
-  line-height: 35px;
   text-align: center;
+  padding: 0.4em 1.5em;
   background-color: #dd3529;
   background-image: -webkit-gradient(linear, left top, left bottom, color-stop(10%, #e04a3f), color-stop(10%, #cc2c20));
   background-image: -webkit-linear-gradient(#e04a3f 10%, #cc2c20);
@@ -642,6 +639,7 @@ body {
   -webkit-border-radius: 5px;
           border-radius: 5px;
   color: white;
+  z-index: 999;
 }
 #SchoolRecruit .home-page .hat {
   position: absolute;
@@ -1400,8 +1398,8 @@ body {
   left: 50%;
   background-image: none;
   background-color: transparent;
-  -webkit-transform: translate3d(-50%, -110%, 0);
-          transform: translate3d(-50%, -110%, 0);
+  -webkit-transform: translate3d(-50%, -80%, 0);
+          transform: translate3d(-50%, -80%, 0);
   opacity: 1;
   -webkit-transition: opacity 0.3s;
   transition: opacity 0.3s;
@@ -1410,29 +1408,29 @@ body {
   position: absolute;
   top: 50%;
   left: 50%;
-  width: 12px;
-  height: 12px;
+  width: 10px;
+  height: 10px;
   border-style: solid;
-  border-color: transparent transparent #ffcc00 #ffcc00;
+  color: #dd3529;
+  border-color: transparent transparent currentColor currentColor;
   border-width: 2px;
-}
-.swiper-button-next > .inner:nth-child(1) {
-  -webkit-transform: translate3d(-50%, 0, 0) rotate(-45deg);
-          transform: translate3d(-50%, 0, 0) rotate(-45deg);
   -webkit-animation: sliderDownFlash 1.5s infinite;
           animation: sliderDownFlash 1.5s infinite;
+  -webkit-transform: translate3d(-50%, 0, 0) rotate(-45deg);
+          transform: translate3d(-50%, 0, 0) rotate(-45deg);
+}
+.swiper-button-next > .inner:nth-child(1) {
+  top: 0;
 }
 .swiper-button-next > .inner:nth-child(2) {
-  -webkit-transform: translate3d(-50%, 40%, 0) rotate(-45deg);
-          transform: translate3d(-50%, 40%, 0) rotate(-45deg);
-  -webkit-animation: sliderDownFlash 1.5s infinite 0.1s;
-          animation: sliderDownFlash 1.5s infinite 0.1s;
+  top: 16%;
+  -webkit-animation-delay: 0.1s;
+          animation-delay: 0.1s;
 }
 .swiper-button-next > .inner:nth-child(3) {
-  -webkit-transform: translate3d(-50%, 80%, 0) rotate(-45deg);
-          transform: translate3d(-50%, 80%, 0) rotate(-45deg);
-  -webkit-animation: sliderDownFlash 1.5s infinite 0.2s;
-          animation: sliderDownFlash 1.5s infinite 0.2s;
+  top: 32%;
+  -webkit-animation-delay: 0.2s;
+          animation-delay: 0.2s;
 }
 .swiper-button-next.swiper-button-disabled {
   opacity: 0;
