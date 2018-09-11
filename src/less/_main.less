@@ -1,6 +1,6 @@
 // 定义变量
 @focus: rgb(255, 204, 0);
-@primary-color: #dd3529;
+@primary: #dd3529;
 
 body,
 div,
@@ -431,11 +431,11 @@ body {
   .home-page {
     .index-title {
       position: absolute;
-      top: 8vh;
+      top: 7vh;
       left: 50%;
       width: 286px;
       transform: translateX(-50%);
-      filter: drop-shadow(-2px -1px #21c9c3) drop-shadow(1px 2px #dbab21);
+      filter: drop-shadow(-1px -1px @focus);
     }
 
     .recruit-btn {
@@ -446,13 +446,13 @@ body {
       font-size: 20px;
       text-align: center;
       padding: 0.4em 1.5em;
-      background-color: @primary-color;
+      background-color: @primary;
       background-image: linear-gradient(
-        lighten(@primary-color, 5%) 10%,
-        darken(@primary-color, 5%)
+        lighten(@primary, 5%) 10%,
+        darken(@primary, 5%)
       );
-      border: 1px solid darken(@primary-color, 5%);
-      border-bottom-color: @primary-color;
+      border: 1px solid darken(@primary, 5%);
+      border-bottom-color: @primary;
       border-radius: 5px;
       color: white;
       z-index: 999;

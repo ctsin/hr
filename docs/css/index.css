@@ -1071,13 +1071,13 @@ body {
 }
 #SchoolRecruit .home-page .index-title {
   position: absolute;
-  top: 8vh;
+  top: 7vh;
   left: 50%;
   width: 286px;
   -webkit-transform: translateX(-50%);
           transform: translateX(-50%);
-  -webkit-filter: drop-shadow(-2px -1px #21c9c3) drop-shadow(1px 2px #dbab21);
-          filter: drop-shadow(-2px -1px #21c9c3) drop-shadow(1px 2px #dbab21);
+  -webkit-filter: drop-shadow(-1px -1px #ffcc00);
+          filter: drop-shadow(-1px -1px #ffcc00);
 }
 #SchoolRecruit .home-page .recruit-btn {
   position: absolute;
