@@ -397,77 +397,6 @@ body {
     }
   }
 
-  @arrow-falsh-start: 0.1;
-  @arrow-falsh-end: 0.6;
-
-  @keyframes arrow-falsh {
-    from {
-      opacity: @arrow-falsh-start;
-    }
-
-    5% {
-      opacity: @arrow-falsh-end;
-    }
-
-    10% {
-      opacity: @arrow-falsh-start;
-    }
-
-    15% {
-      opacity: @arrow-falsh-end;
-    }
-
-    20% {
-      opacity: @arrow-falsh-start;
-    }
-
-    25% {
-      opacity: @arrow-falsh-end;
-    }
-
-    to {
-      opacity: 0;
-    }
-  }
-
-  .arrow-indicator {
-    @size: 1.5em;
-
-    position: absolute;
-    top: 40%;
-    left: 0;
-    width: 100%;
-    color: white;
-
-    &::before,
-    &::after {
-      content: "";
-      position: absolute;
-      top: -(@size / 2);
-      width: @size;
-      height: @size;
-      border-color: currentColor;
-      border-style: solid;
-    }
-
-    &::before {
-      transform: rotate(45deg);
-      left: @size;
-      border-width: 0 0 2px 2px;
-    }
-
-    &::after {
-      transform: rotate(-45deg);
-      right: @size;
-      border-width: 0 2px 2px 0;
-    }
-
-    &.flash {
-      transform-origin: center;
-      animation: arrow-falsh 2s forwards infinite;
-    }
-  }
-
   .big-title {
     padding-top: 20px;
     font-size: 19px;
@@ -1352,5 +1281,89 @@ body {
     border-color: currentColor;
     border-style: solid;
     transform: rotate(45deg);
+  }
+}
+
+@arrow-falsh-start: 0.1;
+@arrow-falsh-end: 0.6;
+
+@keyframes arrow-falsh {
+  from {
+    opacity: @arrow-falsh-start;
+  }
+
+  3% {
+    opacity: @arrow-falsh-end;
+  }
+
+  6% {
+    opacity: @arrow-falsh-start;
+  }
+
+  9% {
+    opacity: @arrow-falsh-end;
+  }
+
+  12% {
+    opacity: @arrow-falsh-start;
+  }
+
+  15% {
+    opacity: @arrow-falsh-end;
+  }
+
+  to {
+    opacity: 0;
+  }
+}
+
+// 左右导航指示
+.arrow-indicator {
+  @size: 1.5em;
+
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  color: white;
+
+  &::before,
+  &::after {
+    content: "";
+    position: absolute;
+    top: -(@size / 2);
+    width: @size;
+    height: @size;
+    border-color: currentColor;
+    border-style: solid;
+  }
+
+  &::before {
+    transform: rotate(45deg);
+    left: @size;
+    border-width: 0 0 2px 2px;
+  }
+
+  &::after {
+    transform: rotate(-45deg);
+    right: @size;
+    border-width: 0 2px 2px 0;
+  }
+
+  &.flash {
+    transform-origin: center;
+    animation: arrow-falsh 2.5s forwards infinite;
+  }
+
+  &.beginning {
+    &::before {
+      display: none;
+    }
+  }
+
+  &.end {
+    &::after {
+      display: none;
+    }
   }
 }

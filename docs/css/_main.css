@@ -582,87 +582,6 @@ body {
   background-repeat: no-repeat;
   background-size: 40px 100px;
 }
-@-webkit-keyframes arrow-falsh {
-  from {
-    opacity: 0.1;
-  }
-  5% {
-    opacity: 0.6;
-  }
-  10% {
-    opacity: 0.1;
-  }
-  15% {
-    opacity: 0.6;
-  }
-  20% {
-    opacity: 0.1;
-  }
-  25% {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 0;
-  }
-}
-@keyframes arrow-falsh {
-  from {
-    opacity: 0.1;
-  }
-  5% {
-    opacity: 0.6;
-  }
-  10% {
-    opacity: 0.1;
-  }
-  15% {
-    opacity: 0.6;
-  }
-  20% {
-    opacity: 0.1;
-  }
-  25% {
-    opacity: 0.6;
-  }
-  to {
-    opacity: 0;
-  }
-}
-#SchoolRecruit .arrow-indicator {
-  position: absolute;
-  top: 40%;
-  left: 0;
-  width: 100%;
-  color: white;
-}
-#SchoolRecruit .arrow-indicator::before,
-#SchoolRecruit .arrow-indicator::after {
-  content: "";
-  position: absolute;
-  top: -0.75em;
-  width: 1.5em;
-  height: 1.5em;
-  border-color: currentColor;
-  border-style: solid;
-}
-#SchoolRecruit .arrow-indicator::before {
-  -webkit-transform: rotate(45deg);
-          transform: rotate(45deg);
-  left: 1.5em;
-  border-width: 0 0 2px 2px;
-}
-#SchoolRecruit .arrow-indicator::after {
-  -webkit-transform: rotate(-45deg);
-          transform: rotate(-45deg);
-  right: 1.5em;
-  border-width: 0 2px 2px 0;
-}
-#SchoolRecruit .arrow-indicator.flash {
-  -webkit-transform-origin: center;
-          transform-origin: center;
-  -webkit-animation: arrow-falsh 2s forwards infinite;
-          animation: arrow-falsh 2s forwards infinite;
-}
 #SchoolRecruit .big-title {
   padding-top: 20px;
   font-size: 19px;
@@ -1527,4 +1446,91 @@ body {
   border-style: solid;
   -webkit-transform: rotate(45deg);
           transform: rotate(45deg);
+}
+@-webkit-keyframes arrow-falsh {
+  from {
+    opacity: 0.1;
+  }
+  3% {
+    opacity: 0.6;
+  }
+  6% {
+    opacity: 0.1;
+  }
+  9% {
+    opacity: 0.6;
+  }
+  12% {
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 0;
+  }
+}
+@keyframes arrow-falsh {
+  from {
+    opacity: 0.1;
+  }
+  3% {
+    opacity: 0.6;
+  }
+  6% {
+    opacity: 0.1;
+  }
+  9% {
+    opacity: 0.6;
+  }
+  12% {
+    opacity: 0.1;
+  }
+  15% {
+    opacity: 0.6;
+  }
+  to {
+    opacity: 0;
+  }
+}
+.arrow-indicator {
+  position: absolute;
+  top: 40%;
+  left: 0;
+  width: 100%;
+  color: white;
+}
+.arrow-indicator::before,
+.arrow-indicator::after {
+  content: "";
+  position: absolute;
+  top: -0.75em;
+  width: 1.5em;
+  height: 1.5em;
+  border-color: currentColor;
+  border-style: solid;
+}
+.arrow-indicator::before {
+  -webkit-transform: rotate(45deg);
+          transform: rotate(45deg);
+  left: 1.5em;
+  border-width: 0 0 2px 2px;
+}
+.arrow-indicator::after {
+  -webkit-transform: rotate(-45deg);
+          transform: rotate(-45deg);
+  right: 1.5em;
+  border-width: 0 2px 2px 0;
+}
+.arrow-indicator.flash {
+  -webkit-transform-origin: center;
+          transform-origin: center;
+  -webkit-animation: arrow-falsh 2.5s forwards infinite;
+          animation: arrow-falsh 2.5s forwards infinite;
+}
+.arrow-indicator.beginning::before {
+  display: none;
+}
+.arrow-indicator.end::after {
+  display: none;
 }

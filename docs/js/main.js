@@ -8,7 +8,7 @@ $(function () {
   var swiperSchoolRecruit = new Swiper("#SchoolRecruit", {
     nextButton: ".swiper-button-next",
     direction: "vertical",
-    // initialSlide: 3,
+    // initialSlide: 1,
     onImagesReady: function onImagesReady() {
       $(".boy").addClass("a-fadeinB-boy");
       $(".girl").addClass("a-fadeinB-boy");
@@ -16,7 +16,7 @@ $(function () {
       $(".school").addClass("a-fadeinB-school");
       $(".swiper-button-next .inner").addClass("animate");
     },
-    onSlideChangeEnd: function onSlideChangeEnd(swiper) {
+    onSlideChangeStart: function onSlideChangeStart(swiper) {
       if (swiper.activeIndex == "1") {
         //- 集团信息
         $(".floor-base").addClass("a-fadein");
@@ -68,8 +68,11 @@ $(function () {
 
   //- 集团信息滑动块
   new Swiper("#GroupSlide", {
-    pagination: ".swiper-pagination-h",
-    onSlideChangeEnd: function onSlideChangeEnd(swiper) {
+    onInit: function onInit() {
+      var nav = $(".arrow-indicator");
+      nav.addClass("beginning");
+    },
+    onSlideChangeStart: function onSlideChangeStart(swiper) {
       if (swiper.activeIndex == "1") {
         $(".key-node").each(function (index) {
           var _this = this;
@@ -79,11 +82,25 @@ $(function () {
           }, 400 * index);
         });
       }
+
+      var nav = $(".arrow-indicator");
+      nav.toggleClass("end", swiper.isEnd);
+      nav.toggleClass("beginning", swiper.isBeginning);
     }
   });
 
   //- 薪酬福利滑动块
   Swiper("#WelfareSlide", {
-    pagination: ".swiper-pagination-h"
+    onInit: function onInit() {
+      var nav = $(".arrow-indicator");
+
+      nav.addClass("beginning");
+    },
+    onSlideChangeStart: function onSlideChangeStart(swiper) {
+      var nav = $(".arrow-indicator");
+
+      nav.toggleClass("end", swiper.isEnd);
+      nav.toggleClass("beginning", swiper.isBeginning);
+    }
   });
 });
