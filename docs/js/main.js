@@ -68,8 +68,9 @@ $(function () {
 
   //- 集团信息滑动块
   new Swiper("#GroupSlide", {
-    onInit: function onInit() {
-      var nav = $(".arrow-indicator");
+    onInit: function onInit(swiper) {
+      var nav = $(".arrow-indicator", swiper.container);
+
       nav.addClass("beginning");
     },
     onSlideChangeStart: function onSlideChangeStart(swiper) {
@@ -83,7 +84,7 @@ $(function () {
         });
       }
 
-      var nav = $(".arrow-indicator");
+      var nav = $(".arrow-indicator", swiper.container);
       nav.toggleClass("end", swiper.isEnd);
       nav.toggleClass("beginning", swiper.isBeginning);
     }
@@ -91,13 +92,13 @@ $(function () {
 
   //- 薪酬福利滑动块
   Swiper("#WelfareSlide", {
-    onInit: function onInit() {
-      var nav = $(".arrow-indicator");
+    onInit: function onInit(swiper) {
+      var nav = $(".arrow-indicator", swiper.container);
 
       nav.addClass("beginning");
     },
     onSlideChangeStart: function onSlideChangeStart(swiper) {
-      var nav = $(".arrow-indicator");
+      var nav = $(".arrow-indicator", swiper.container);
 
       nav.toggleClass("end", swiper.isEnd);
       nav.toggleClass("beginning", swiper.isBeginning);
