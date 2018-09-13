@@ -556,21 +556,21 @@ body {
   height: 100%;
 }
 #SchoolRecruit .home-page {
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/bg-index.jpg");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/bg-index.jpg");
   background-size: 100%;
   background-color: #40b69d;
 }
 #SchoolRecruit .group-info {
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/bg-2.jpg");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/bg-2.jpg");
 }
 #SchoolRecruit .industry-status {
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/bg-2.jpg");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/bg-2.jpg");
 }
 #SchoolRecruit .pay-welfare {
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/bg-4.jpg");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/bg-4.jpg");
 }
 #SchoolRecruit .contact-us {
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/bg-2.jpg");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/bg-2.jpg");
 }
 #SchoolRecruit .icon {
   position: relative;
@@ -578,7 +578,7 @@ body {
 #SchoolRecruit .icon:after {
   content: "";
   position: absolute;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/icon.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/icon.png");
   background-repeat: no-repeat;
   background-size: 40px 100px;
 }
@@ -625,7 +625,7 @@ body {
   right: 4vw;
   width: 71px;
   height: 50px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hat.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/hat.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -636,7 +636,7 @@ body {
   z-index: 1;
   width: 100px;
   height: 204px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/boy.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/boy.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -647,7 +647,7 @@ body {
   left: 20vw;
   width: 97px;
   height: 220px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/girl.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/girl.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -657,7 +657,7 @@ body {
   left: 0;
   width: 100vw;
   height: 142px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/grassland.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/grassland.png");
   background-repeat: no-repeat;
   background-size: 100vw 142px;
 }
@@ -667,7 +667,7 @@ body {
   left: 0;
   width: 100vw;
   height: 154px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/school.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/school.png");
   background-repeat: no-repeat;
   background-size: 100vw 154px;
 }
@@ -677,7 +677,7 @@ body {
   left: 0;
   width: 100vw;
   height: 36px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/floor-base.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/floor-base.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -687,7 +687,7 @@ body {
   left: 15px;
   width: 60px;
   height: 75px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/building1.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/building1.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -697,7 +697,7 @@ body {
   right: 10px;
   width: 85px;
   height: 71px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/building2.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/building2.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -707,7 +707,7 @@ body {
   left: 0;
   width: 40px;
   height: 40px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/rider.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/rider.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -716,7 +716,7 @@ body {
   width: 217px;
   height: 210px;
   margin: 5vh auto;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/test.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/test.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -749,7 +749,7 @@ body {
   margin-bottom: 25px;
   width: 100vw;
   height: 199px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/honor.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/honor.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -820,7 +820,7 @@ body {
   margin: 8vh auto;
   width: 238px;
   height: 368px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/growing-line.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/growing-line.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -833,7 +833,7 @@ body {
   left: -60px;
   width: 58px;
   height: 58px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/growth-pic.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/growth-pic.png");
   background-repeat: no-repeat;
   background-size: 58px 339px;
 }
@@ -917,7 +917,7 @@ body {
   left: 50%;
   -webkit-transform: translateX(-50%) scale(0.8);
           transform: translateX(-50%) scale(0.8);
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/status-head.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/status-head.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -933,7 +933,7 @@ body {
   left: 26%;
   width: 126px;
   height: 120px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/status-building.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/status-building.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -958,7 +958,7 @@ body {
   content: "";
   height: 25px;
   width: 25px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/status-sprite.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/status-sprite.png");
   background-repeat: no-repeat;
   background-size: 77.5px 25px;
 }
@@ -1048,7 +1048,7 @@ body {
   height: 151px;
   -webkit-border-radius: 50%;
           border-radius: 50%;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/human-avater.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/human-avater.png");
   background-repeat: no-repeat;
   background-size: 151px 455px;
 }
@@ -1084,7 +1084,7 @@ body {
 }
 #SchoolRecruit .recruit-job .job-head {
   height: 174px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/job-info-head.jpg");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/job-info-head.jpg");
   background-repeat: no-repeat;
   background-size: 100%;
   background-position: center;
@@ -1095,7 +1095,7 @@ body {
   left: -40%;
   width: 160px;
   height: 38px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/aircraft.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/aircraft.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -1105,7 +1105,7 @@ body {
   left: 136px;
   width: 16px;
   height: 50px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/person.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/person.png");
   background-repeat: no-repeat;
   background-size: 69px 48px;
   background-position: 0;
@@ -1116,7 +1116,7 @@ body {
   left: 260px;
   width: 17px;
   height: 48px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/person.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/person.png");
   background-repeat: no-repeat;
   background-size: 69px 48px;
   background-position: -44px 0;
@@ -1127,7 +1127,7 @@ body {
   left: 212px;
   width: 26px;
   height: 49px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/person.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/person.png");
   background-repeat: no-repeat;
   background-size: 69px 48px;
   background-position: -17px 0;
@@ -1153,7 +1153,7 @@ body {
   margin: 38px auto 20px;
   height: 90px;
   width: 90px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/job-type.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/job-type.png");
   background-repeat: no-repeat;
   background-size: 360px 90px;
 }
@@ -1176,7 +1176,7 @@ body {
   background-position: left center;
 }
 #SchoolRecruit .recruit-job .sell-er-bg {
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/sell-bg.jpg");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/sell-bg.jpg");
 }
 #SchoolRecruit .recruit-job .summary {
   margin-top: 10px;
@@ -1321,7 +1321,7 @@ body {
   left: -20px;
   width: 157px;
   height: 104px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/clound.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/clound.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -1331,7 +1331,7 @@ body {
   right: -18px;
   width: 160px;
   height: 88px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/clound.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/clound.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -1341,7 +1341,7 @@ body {
   left: 20%;
   width: 37px;
   height: 37px;
-  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/fireworks.png");
+  background-image: url("http://7q5eqt.com1.z0.glb.clouddn.com/hr-2019/fireworks.png");
   background-repeat: no-repeat;
   background-size: 100%;
 }
@@ -1452,7 +1452,7 @@ body {
   top: 40%;
   left: 0;
   width: 100%;
-  color: white;
+  color: rgba(255, 255, 255, 0.6);
   z-index: 999;
 }
 .arrow-indicator > .left,
